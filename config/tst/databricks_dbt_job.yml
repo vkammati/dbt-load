@@ -1,0 +1,274 @@
+job_cluster:
+  azure_attributes:
+    availability: "SPOT_WITH_FALLBACK_AZURE"
+
+jobs:
+  - name: "DBT-DATTA-FI-EUH-D-HANA-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: true
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:FI-EUH-D-HANA"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-CLUSTER-EUH-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:CLUSTER-EUH"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-FI-EUH-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:FI-EUH"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+
+  - name: "DBT-DATTA-HM-EUH-D-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:HM-EUH-D"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-SD-EUH-D-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:SD-EUH-D"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-ATTR-EUH-COPA-D-BW-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:MD-ATTR-EUH-COPA-D-BW"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-COPA-EUH-D-BW-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:COPA-EUH-D-BW"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-ATTR-EUH-SD-D-HANA-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: true
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:MD-ATTR-EUH-SD-D-HANA"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-ATTR-EUH-FI-D-HANA-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: true
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:MD-ATTR-EUH-FI-D-HANA"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-FI-EH-D-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:FI-EH-D"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-EH-SD-D-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "build -s tag:MD-EH-SD-D"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-EH-FI-D-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: true
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Build"
+        max_retries: 0
+        dbt_command: "run -s tag:MD-EH-FI-D"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+
+
+  - name: "Terraform - dbt job - generate Elementary report"
+    cluster_type: standard
+    tasks:
+      - task_key: "Elementary-report-generation"
+        dbt_command: "run -s elementary"
+        elementary:
+          update_github_pages: true
+          max_days_back: 30
+          earliest_date_back: 2024-01-01

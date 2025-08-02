@@ -1,0 +1,27 @@
+job_cluster:
+  azure_attributes:
+    availability: "SPOT_WITH_FALLBACK_AZURE"
+
+jobs:
+  - name: "Terraform - dbt job"
+    trigger_once_after_deploy: true
+    max_concurrent_runs: 1
+    tasks:
+      - task_key: "DBT_build"
+        max_retries: 0
+        dbt_command: "build"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: true
+    tags:
+      creator: dbt-terraform
+  - name: "Terraform - dbt job - generate Elementary report"
+    tasks:
+      - task_key: "Elementary-report-generation"
+        dbt_command: "run -s elementary"
+        elementary:
+          update_github_pages: true
+          max_days_back: 30
+          earliest_date_back: 2024-01-01

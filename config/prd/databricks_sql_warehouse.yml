@@ -1,0 +1,2 @@
+sql_warehouse:
+  - name: "terraform_sql_warehouse_minimal_parameters"

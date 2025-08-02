@@ -1,0 +1,296 @@
+# All configurations below are meant to showcase the different options available
+# when creating a Databricks jobs. Please treat them as such and adjust them
+# to your specific needs! This applies to all yml files in the config folder.
+# You can find a complete, detailed explanation of all attributed in our edp dbt
+# reference pipeline documentation.
+
+#Specify the availability of job clusters - Azure
+job_cluster:
+  azure_attributes:
+    availability: "SPOT_WITH_FALLBACK_AZURE"
+
+
+jobs:
+  - name: "DBT-DATTA-FI-EUH-D-HANA-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: true
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:FI-EUH-D-HANA"
+        # http_path: "/sql/1.0/warehouses/ad95f5b2ef091f4a"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-CLUSTER-EUH-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:CLUSTER-EUH"
+        # http_path: "/sql/1.0/warehouses/e34f97cee01df80e"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-FI-EUH-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:FI-EUH"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+
+  - name: "DBT-DATTA-HM-EUH-D-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:HM-EUH-D"
+        # http_path: "/sql/1.0/warehouses/bf412fd4360e4657"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-SD-EUH-D-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:SD-EUH-D"
+        # http_path: "/sql/1.0/warehouses/4a0e054fcf563c21"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-ATTR-EUH-COPA-D-BW-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:MD-ATTR-EUH-COPA-D-BW"
+        # http_path: "/sql/1.0/warehouses/7c806e28cbfd76f4"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-COPA-EUH-D-BW-workflow"
+    cluster_type: standard
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:COPA-EUH-D-BW"
+        # http_path: "/sql/1.0/warehouses/a501439971a44794"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+          load_type: "init"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-ATTR-EUH-SD-D-HANA-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: true
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:MD-ATTR-EUH-SD-D-HANA"
+        # http_path: "/sql/1.0/warehouses/bcf171bd5c6d5444"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-ATTR-EUH-FI-D-HANA-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: true
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:MD-ATTR-EUH-FI-D-HANA"
+        # http_path: "/sql/1.0/warehouses/46d600acba88a54c"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-FI-EH-D-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:FI-EH-D"
+        # http_path: "/sql/1.0/warehouses/6d4720004127a66f"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-EH-SD-D-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: false
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:MD-EH-SD-D"
+        # http_path: "/sql/1.0/warehouses/538e698762510547"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+  - name: "DBT-DATTA-MD-EH-FI-D-workflow"
+    cluster_type: serverless
+    trigger_once_after_deploy: true
+    max_concurrent_runs: 1
+    timeout_seconds: 12000
+    schedule:
+      quartz_cron_expression: "10 15 10 * * ?"
+      timezone_id: "UTC"
+      pause_status: "PAUSED"
+    tasks:
+      - task_key: "DBT_Run"
+        max_retries: 0
+        dbt_command: "run -s tag:MD-EH-FI-D"
+        # http_path: "/sql/1.0/warehouses/f39024dce001c7dd"
+        dbt_vars:
+          job_id: "{{job.id}}"
+          run_id: "{{job.run_id}}"
+        elementary:
+          teams_notification: false
+    tags:
+      Area: "DBT"
+
+
+  - name: "DBT job - generate Elementary report"
+    cluster_type: standard
+    tasks:
+      - task_key: "Elementary-report-generation"
+        dbt_command: "run -s elementary"
+        log_level: "DEBUG"
+        elementary:
+          update_github_pages: true # If omitted, or set to 'false' the elementary report will not be updated on the github pages
+          # You can specify what period the elementary report should report on. By default, it will look at the runs from the
+          # last 7 days. This can be overrule here by specifying the 'max_days_back' attribute or by setting the 'earliest_date_back'
+          # attribute to a fixed date. If both are set, the shortest period of the two will be used.
+          max_days_back: 30 #if omitted, the elementary report will look at the runs from the last 7 days
+          earliest_date_back: 2024-01-01 # If omitted, the elementary report will look at the runs from the last 7 days
