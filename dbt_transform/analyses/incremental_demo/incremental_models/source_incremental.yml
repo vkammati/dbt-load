@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: example_incremental_demo
+    schema: edp_dbt_ref_pipeline_example
+    tables:
+      - name: raw_source_base_a
+        config:
+          unique_key: id
+      - name: raw_source_child_b
+        config:
+          unique_key: id
+      - name: raw_source_base_a_del
+        config:
+          unique_key: id
+      - name: raw_source_child_b_del
+        config:
+          unique_key: id

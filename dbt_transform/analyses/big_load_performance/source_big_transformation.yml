@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: example_big_order_table
+    schema: dbt_example_raw
+    catalog: "{{ env_var('DBX_UNITY_CATALOG') }}"
+    tables:
+      - name: big_order_table
