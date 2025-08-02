@@ -1,1 +1,3 @@
-
+# ignore all demos
+/analyses/incremental_demo
+/analyses/big_load_performance
