@@ -1,0 +1,1753 @@
+version: 2
+
+models:
+  - name: fact_fi_gl_accounting_tsap
+    description: ""
+    columns:
+      - name: company_code
+        data_type: string
+        description: ""
+
+      - name: accounting_document_number
+        data_type: string
+        description: ""
+
+      - name: fiscal_year
+        data_type: string
+        description: ""
+
+      - name: document_type
+        data_type: string
+        description: ""
+
+      - name: document_date_in_document
+        data_type: string
+        description: ""
+
+      - name: posting_date_in_the_document
+        data_type: string
+        description: ""
+
+      - name: fiscal_period
+        data_type: string
+        description: ""
+
+      - name: day_on_which_accounting_document_was_entered
+        data_type: string
+        description: ""
+
+      - name: time_of_entry
+        data_type: string
+        description: ""
+
+      - name: date_of_the_last_document_change_by_transaction
+        data_type: string
+        description: ""
+
+      - name: date_of_the_last_document_update
+        data_type: string
+        description: ""
+
+      - name: translation_date
+        data_type: string
+        description: ""
+
+      - name: user_name
+        data_type: string
+        description: ""
+
+      - name: transaction_code
+        data_type: string
+        description: ""
+
+      - name: number_of_cross_company_code_posting_transaction
+        data_type: string
+        description: ""
+
+      - name: reference_document_number
+        data_type: string
+        description: ""
+
+      - name: recurring_entry_document_number
+        data_type: string
+        description: ""
+
+      - name: reverse_document_number
+        data_type: string
+        description: ""
+
+      - name: reverse_document_fiscal_year
+        data_type: string
+        description: ""
+
+      - name: document_header_text
+        data_type: string
+        description: ""
+
+      - name: currency_key
+        data_type: string
+        description: ""
+
+      - name: exchange_rate
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: currency_key_for_the_group_currency
+        data_type: string
+        description: ""
+
+      - name: group_currency_exchange_rate
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: document_status
+        data_type: string
+        description: ""
+
+      - name: indicator_document_posted_net
+        data_type: string
+        description: ""
+
+      - name: unplanned_delivery_costs
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: indicator_document_is_posted_to_a_previous_period
+        data_type: string
+        description: ""
+
+      - name: business_transaction
+        data_type: string
+        description: ""
+
+      - name: batch_input_session_name
+        data_type: string
+        description: ""
+
+      - name: document_name_in_the_archive_system
+        data_type: string
+        description: ""
+
+      - name: extract_id_document_header
+        data_type: string
+        description: ""
+
+      - name: internal_document_type_for_document_control
+        data_type: string
+        description: ""
+
+      - name: reference_procedure
+        data_type: string
+        description: ""
+
+      - name: object_key
+        data_type: string
+        description: ""
+
+      - name: financial_management_area
+        data_type: string
+        description: ""
+
+      - name: local_currency
+        data_type: string
+        description: ""
+
+      - name: currency_key_of_second_local_currency
+        data_type: string
+        description: ""
+
+      - name: currency_key_of_third_local_currency
+        data_type: string
+        description: ""
+
+      - name: exchange_rate_for_the_second_local_currency
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: exchange_rate_for_the_third_local_currency
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: source_currency_for_currency_translation_2
+        data_type: string
+        description: ""
+
+      - name: source_currency_for_currency_translation_3
+        data_type: string
+        description: ""
+
+      - name: translation_date_type_for_second_local_currency
+        data_type: string
+        description: ""
+
+      - name: translation_date_type_for_third_local_currency
+        data_type: string
+        description: ""
+
+      - name: indicator_document_is_flagged_for_reversal
+        data_type: string
+        description: ""
+
+      - name: planned_date_for_the_reverse_posting
+        data_type: string
+        description: ""
+
+      - name: calculate_tax_automatically
+        data_type: string
+        description: ""
+
+      - name: currency_type_of_second_local_currency
+        data_type: string
+        description: ""
+
+      - name: currency_type_of_third_local_currency
+        data_type: string
+        description: ""
+
+      - name: exchange_rate_type_2
+        data_type: string
+        description: ""
+
+      - name: exchange_rate_type_3
+        data_type: string
+        description: ""
+
+      - name: gl_account_amounts_entered_exclude_tax
+        data_type: string
+        description: ""
+
+      - name: source_company_code
+        data_type: string
+        description: ""
+
+      - name: enter_vat_use_tax_sales_tax_on_detail_screen
+        data_type: string
+        description: ""
+
+      - name: status_of_data_transfer_into_subsequent_release
+        data_type: string
+        description: ""
+
+      - name: logical_system
+        data_type: string
+        description: ""
+
+      - name: exchange_rate_for_taxes
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: rate_for_tax_values_in_local_currency
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: lot_number_for_requests
+        data_type: string
+        description: ""
+
+      - name: indicator_customer_bill_of_exchange_payment_before_due_date
+        data_type: string
+        description: ""
+
+      - name: reason_for_reversal_or_inverse_posting
+        data_type: string
+        description: ""
+
+      - name: name_of_user_who_parked_this_document
+        data_type: string
+        description: ""
+
+      - name: day_of_parking_of_accounting_document
+        data_type: string
+        description: ""
+
+      - name: time_of_parking
+        data_type: string
+        description: ""
+
+      - name: parking_transaction
+        data_type: string
+        description: ""
+
+      - name: branch_number
+        data_type: string
+        description: ""
+
+      - name: number_of_pages_of_invoice
+        data_type: string
+        description: ""
+
+      - name: indicator_entry_represents_a_discount_document
+        data_type: string
+        description: ""
+
+      - name: reference_key_1_internal_for_document_header
+        data_type: string
+        description: ""
+
+      - name: reference_key_2_internal_for_document_header
+        data_type: string
+        description: ""
+
+      - name: specifies_whether_doc_is_reversal_doc_or_reversed_doc
+        data_type: string
+        description: ""
+
+      - name: invoice_receipt_date
+        data_type: string
+        description: ""
+
+      - name: ledger_in_general_ledger_accounting
+        data_type: string
+        description: ""
+
+      - name: ledger_group
+        data_type: string
+        description: ""
+
+      - name: real_estate_management_mandate
+        data_type: string
+        description: ""
+
+      - name: alternative_reference_number
+        data_type: string
+        description: ""
+
+      - name: tax_reporting_date
+        data_type: string
+        description: ""
+
+      - name: classification_of_an_fi_document
+        data_type: string
+        description: ""
+
+      - name: fi_document_originates_from_split_posting_indicator
+        data_type: string
+        description: ""
+
+      - name: cash_relevant_document
+        data_type: string
+        description: ""
+
+      - name: follow_on_document_indicator
+        data_type: string
+        description: ""
+
+      - name: doc_contains_open_item_that_was_transferred_during_reorg
+        data_type: string
+        description: ""
+
+      - name: defines_subset_of_components_for_the_fico_interface
+        data_type: string
+        description: ""
+
+      - name: exchange_rate_type
+        data_type: string
+        description: ""
+
+      - name: market_data_exchange_rate
+        data_type: decimal(28,14)
+        description: ""
+
+      - name: market_data_exchange_rate_2
+        data_type: decimal(28,14)
+        description: ""
+
+      - name: market_data_exchange_rate_3
+        data_type: decimal(28,14)
+        description: ""
+
+      - name: document_originates_from_multi_currency_accounting
+        data_type: string
+        description: ""
+
+      - name: date_of_resubmission
+        data_type: string
+        description: ""
+
+      - name: document_status_1
+        data_type: string
+        description: ""
+
+      - name: document_category_payment_requests
+        data_type: string
+        description: ""
+
+      - name: reason
+        data_type: string
+        description: ""
+
+      - name: region
+        data_type: string
+        description: ""
+
+      - name: reason_for_reversal_is_ps_requests
+        data_type: string
+        description: ""
+
+      - name: is_ps_file_number
+        data_type: string
+        description: ""
+
+      - name: interest_formula
+        data_type: string
+        description: ""
+
+      - name: interest_calc_date
+        data_type: string
+        description: ""
+
+      - name: posting_day
+        data_type: string
+        description: ""
+
+      - name: actual_posting
+        data_type: string
+        description: ""
+
+      - name: date_of_last_change
+        data_type: string
+        description: ""
+
+      - name: last_changed_at
+        data_type: string
+        description: ""
+
+      - name: type_of_payment_transfer
+        data_type: string
+        description: ""
+
+      - name: payment_cards_card_type
+        data_type: string
+        description: ""
+
+      - name: payment_cards_card_number
+        data_type: string
+        description: ""
+
+      - name: payment_statistical_sampling_block
+        data_type: string
+        description: ""
+
+      - name: lot_number_for_documents
+        data_type: string
+        description: ""
+
+      - name: user_name_1
+        data_type: string
+        description: ""
+
+      - name: sampled_invoice_by_payment_certification
+        data_type: string
+        description: ""
+
+      - name: ppa_exclude_indicator_bkpf
+        data_type: string
+        description: ""
+
+      - name: budgetary_ledger_indicator
+        data_type: string
+        description: ""
+
+      - name: treasury_offset_status
+        data_type: string
+        description: ""
+
+      - name: date_record_referred_to_treasury
+        data_type: string
+        description: ""
+
+      - name: reason_for_late_payment_bkpf
+        data_type: string
+        description: ""
+
+      - name: number_of_the_document_condition
+        data_type: string
+        description: ""
+
+      - name: type_of_payment_basis_document
+        data_type: string
+        description: ""
+
+      - name: payment_basis_document_number
+        data_type: string
+        description: ""
+
+      - name: payment_basis_document_date
+        data_type: string
+        description: ""
+
+      - name: iban_international_bank_account_number
+        data_type: string
+        description: ""
+
+      - name: incoming_document_number
+        data_type: string
+        description: ""
+
+      - name: incoming_document_date
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: number_of_line_item_within_accounting_document
+        data_type: string
+        description: ""
+
+      - name: identification_of_the_line_item
+        data_type: string
+        description: ""
+
+      - name: clearing_date
+        data_type: string
+        description: ""
+
+      - name: clearing_entry_date
+        data_type: string
+        description: ""
+
+      - name: document_number_of_the_clearing_document
+        data_type: string
+        description: ""
+
+      - name: posting_key
+        data_type: string
+        description: ""
+
+      - name: account_type
+        data_type: string
+        description: ""
+
+      - name: special_gl_indicator
+        data_type: string
+        description: ""
+
+      - name: special_gl_transaction_type
+        data_type: string
+        description: ""
+
+      - name: target_special_gl_indicator
+        data_type: string
+        description: ""
+
+      - name: debit_credit_indicator
+        data_type: string
+        description: ""
+
+      - name: business_area
+        data_type: string
+        description: ""
+
+      - name: trading_partners_business_area
+        data_type: string
+        description: ""
+
+      - name: tax_on_sales_purchases_code
+        data_type: string
+        description: ""
+
+      - name: withholding_tax_code
+        data_type: string
+        description: ""
+
+      - name: amount_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: original_reduction_amount_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_for_updating_in_general_ledger
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: update_currency_for_general_ledger_transaction_figures
+        data_type: string
+        description: ""
+
+      - name: original_tax_base_amount_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: original_tax_base_amount_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_amount_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_amount_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_base_amount_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_base_amount_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: provision_amount_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: additional_tax_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: debitcredit_addition_for_cash_discount
+        data_type: string
+        description: ""
+
+      - name: version_number_component
+        data_type: string
+        description: ""
+
+      - name: tax_type
+        data_type: string
+        description: ""
+
+      - name: group_indicator_for_tax_line_items
+        data_type: string
+        description: ""
+
+      - name: transaction_key
+        data_type: string
+        description: ""
+
+      - name: withholding_tax_base_amount
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: hedged_exchange_rate
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: hedged_amount_in_foreign_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: valuation_difference
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: valuation_difference_for_the_second_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: value_date
+        data_type: string
+        description: ""
+
+      - name: assignment_number
+        data_type: string
+        description: ""
+
+      - name: item_text
+        data_type: string
+        description: ""
+
+      - name: exempted_from_interest_calculation
+        data_type: string
+        description: ""
+
+      - name: company_id_of_trading_partner
+        data_type: string
+        description: ""
+
+      - name: transaction_type
+        data_type: string
+        description: ""
+
+      - name: group_account_number
+        data_type: string
+        description: ""
+
+      - name: transaction_type_for_general_ledger
+        data_type: string
+        description: ""
+
+      - name: planning_level
+        data_type: string
+        description: ""
+
+      - name: planning_group
+        data_type: string
+        description: ""
+
+      - name: planned_amount_in_document_or_gl_account_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: planning_date
+        data_type: string
+        description: ""
+
+      - name: financial_budget_item
+        data_type: string
+        description: ""
+
+      - name: controlling_area
+        data_type: string
+        description: ""
+
+      - name: cost_center
+        data_type: string
+        description: ""
+
+      - name: old_project_number_no_longer_used_psposnr
+        data_type: string
+        description: ""
+
+      - name: order_number
+        data_type: string
+        description: ""
+
+      - name: billing_document
+        data_type: string
+        description: ""
+
+      - name: sales_document
+        data_type: string
+        description: ""
+
+      - name: sales_document_item
+        data_type: string
+        description: ""
+
+      - name: schedule_line_number
+        data_type: string
+        description: ""
+
+      - name: main_asset_number
+        data_type: string
+        description: ""
+
+      - name: asset_subnumber
+        data_type: string
+        description: ""
+
+      - name: asset_transaction_type
+        data_type: string
+        description: ""
+
+      - name: asset_value_date
+        data_type: string
+        description: ""
+
+      - name: personnel_number
+        data_type: string
+        description: ""
+
+      - name: indicator_sales_related_item
+        data_type: string
+        description: ""
+
+      - name: indicator_resident_gl_account
+        data_type: string
+        description: ""
+
+      - name: indicator_can_line_items_be_displayed_by_account
+        data_type: string
+        description: ""
+
+      - name: indicator_open_item_management
+        data_type: string
+        description: ""
+
+      - name: indicator_address_and_bank_data_set_individually
+        data_type: string
+        description: ""
+
+      - name: indicator_statistical_posting_to_cost_center
+        data_type: string
+        description: ""
+
+      - name: indicator_posting_to_order_is_statistical
+        data_type: string
+        description: ""
+
+      - name: indicator_posting_to_project_is_statistical
+        data_type: string
+        description: ""
+
+      - name: indicator_posting_to_profitability_analysis_is_statistical
+        data_type: string
+        description: ""
+
+      - name: indicator_billing_document_update_successful
+        data_type: string
+        description: ""
+
+      - name: indicator_transfer_posting_from_down_payment
+        data_type: string
+        description: ""
+
+      - name: indicator_down_payment_in_net_procedure
+        data_type: string
+        description: ""
+
+      - name: indicator_line_item_not_liable_to_cash_discount
+        data_type: string
+        description: ""
+
+      - name: indicator_capital_goods_affected
+        data_type: string
+        description: ""
+
+      - name: display_item
+        data_type: string
+        description: ""
+
+      - name: indicator_line_item_automatically_created
+        data_type: string
+        description: ""
+
+      - name: indicator_items_cannot_be_copied
+        data_type: string
+        description: ""
+
+      - name: indicator_is_posting_key_used_in_a_payment_transaction
+        data_type: string
+        description: ""
+
+      - name: gl_account_number
+        data_type: string
+        description: ""
+
+      - name: general_ledger_account
+        data_type: string
+        description: ""
+
+      - name: customer_number
+        data_type: string
+        description: ""
+
+      - name: account_number_of_supplier
+        data_type: string
+        description: ""
+
+      - name: account_number_of_the_branch
+        data_type: string
+        description: ""
+
+      - name: indicator_account_is_a_balance_sheet_account
+        data_type: string
+        description: ""
+
+      - name: pl_statement_account_type
+        data_type: string
+        description: ""
+
+      - name: assignment_number_for_special_gl_accounts
+        data_type: string
+        description: ""
+
+      - name: baseline_date_for_due_date_calculation
+        data_type: string
+        description: ""
+
+      - name: terms_of_payment_key
+        data_type: string
+        description: ""
+
+      - name: cash_discount_days_1
+        data_type: decimal(3,0)
+        description: ""
+
+      - name: cash_discount_days_2
+        data_type: decimal(3,0)
+        description: ""
+
+      - name: net_payment_terms_period
+        data_type: decimal(3,0)
+        description: ""
+
+      - name: cash_discount_percentage_1
+        data_type: decimal(5,3)
+        description: ""
+
+      - name: cash_discount_percentage_2
+        data_type: decimal(5,3)
+        description: ""
+
+      - name: amount_eligible_for_cash_discount_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: cash_discount_amount_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: cash_discount_amount_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: payment_method
+        data_type: string
+        description: ""
+
+      - name: payment_block_key
+        data_type: string
+        description: ""
+
+      - name: fixed_payment_terms
+        data_type: string
+        description: ""
+
+      - name: short_key_for_a_house_bank
+        data_type: string
+        description: ""
+
+      - name: partner_bank_type
+        data_type: string
+        description: ""
+
+      - name: net_payment_amount
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_code_for_distribution_1
+        data_type: string
+        description: ""
+
+      - name: amount_in_local_currency_for_tax_distribution_1
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_foreign_currency_for_tax_breakdown_1
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_code_for_distribution_2
+        data_type: string
+        description: ""
+
+      - name: amount_in_local_currency_for_tax_distribution_2
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_foreign_currency_for_tax_breakdown_2
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_code_for_distribution_3
+        data_type: string
+        description: ""
+
+      - name: amount_in_local_currency_for_tax_distribution_3
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_foreign_currency_for_tax_breakdown_3
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: document_no_of_the_invoice_to_which_the_transaction_belongs
+        data_type: string
+        description: ""
+
+      - name: fiscal_year_of_the_relevant_invoice_for_credit_memo
+        data_type: string
+        description: ""
+
+      - name: line_item_in_the_relevant_invoice
+        data_type: string
+        description: ""
+
+      - name: follow_on_document_type
+        data_type: string
+        description: ""
+
+      - name: customs_tariff_number
+        data_type: string
+        description: ""
+
+      - name: customs_date
+        data_type: string
+        description: ""
+
+      - name: state_central_bank_indicator
+        data_type: string
+        description: ""
+
+      - name: supplying_country
+        data_type: string
+        description: ""
+
+      - name: service_indicator_foreign_payment
+        data_type: string
+        description: ""
+
+      - name: invoice_list_number
+        data_type: string
+        description: ""
+
+      - name: settlement_period
+        data_type: string
+        description: ""
+
+      - name: insurance_indicator
+        data_type: string
+        description: ""
+
+      - name: insurance_date
+        data_type: string
+        description: ""
+
+      - name: number_of_bill_of_exchange_usage_document_discount_doc
+        data_type: string
+        description: ""
+
+      - name: fiscal_year_of_bill_of_exchange_usage_document
+        data_type: string
+        description: ""
+
+      - name: line_item_within_the_bill_of_exchange_usage_document
+        data_type: string
+        description: ""
+
+      - name: bill_of_exchange_usage_type
+        data_type: string
+        description: ""
+
+      - name: document_number_of_the_bill_of_exchange_payment_request
+        data_type: string
+        description: ""
+
+      - name: fiscal_year_of_the_bill_of_exchange_payment_request_document
+        data_type: string
+        description: ""
+
+      - name: company_code_in_which_bill_of_exchpayment_request_is_posted
+        data_type: string
+        description: ""
+
+      - name: bill_of_exchange_payment_request_due_date
+        data_type: string
+        description: ""
+
+      - name: base_amount_for_determining_the_preference_amount
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: subsidy_indicator_for_determining_the_reduction_rates
+        data_type: string
+        description: ""
+
+      - name: preference_percentage_rate
+        data_type: decimal(7,2)
+        description: ""
+
+      - name: dunning_key
+        data_type: string
+        description: ""
+
+      - name: dunning_block
+        data_type: string
+        description: ""
+
+      - name: date_of_last_dunning_notice
+        data_type: string
+        description: ""
+
+      - name: dunning_level
+        data_type: string
+        description: ""
+
+      - name: dunning_area
+        data_type: string
+        description: ""
+
+      - name: isr_subscriber_number
+        data_type: string
+        description: ""
+
+      - name: isrqr_reference_number
+        data_type: string
+        description: ""
+
+      - name: por_check_digit
+        data_type: string
+        description: ""
+
+      - name: credit_control_amount
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: certificate_number_of_the_withholding_tax_exemption
+        data_type: string
+        description: ""
+
+      - name: withholding_tax_amount_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: withholding_tax_exempt_amount_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: non_deductible_input_tax_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: non_deductible_input_tax_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: material_number
+        data_type: string
+        description: ""
+
+      - name: plant
+        data_type: string
+        description: ""
+
+      - name: quantity
+        data_type: decimal(13,3)
+        description: ""
+
+      - name: base_unit_of_measure
+        data_type: string
+        description: ""
+
+      - name: quantity_in_unit_of_entry
+        data_type: decimal(13,3)
+        description: ""
+
+      - name: unit_of_entry
+        data_type: string
+        description: ""
+
+      - name: quantity_in_purchase_order_price_unit
+        data_type: decimal(13,3)
+        description: ""
+
+      - name: order_price_unit_purchasing
+        data_type: string
+        description: ""
+
+      - name: purchasing_document_number
+        data_type: string
+        description: ""
+
+      - name: item_number_of_purchasing_document
+        data_type: string
+        description: ""
+
+      - name: sequential_number_of_account_assignment
+        data_type: string
+        description: ""
+
+      - name: delivery_completed_indicator
+        data_type: string
+        description: ""
+
+      - name: price_control_indicator
+        data_type: string
+        description: ""
+
+      - name: price_unit
+        data_type: decimal(5,0)
+        description: ""
+
+      - name: valuation_area
+        data_type: string
+        description: ""
+
+      - name: valuation_type
+        data_type: string
+        description: ""
+
+      - name: posting_string_for_values
+        data_type: string
+        description: ""
+
+      - name: invoice_value_entered_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: invoice_value_in_foreign_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_qualifying_for_bonus_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_posted_in_alternative_price_control
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: alternative_price_control
+        data_type: string
+        description: ""
+
+      - name: new_price
+        data_type: decimal(11,2)
+        description: ""
+
+      - name: indicator_subsequent_debitcredit
+        data_type: string
+        description: ""
+
+      - name: blocking_reason_price
+        data_type: string
+        description: ""
+
+      - name: blocking_reason_quantity
+        data_type: string
+        description: ""
+
+      - name: blocking_reason_date
+        data_type: string
+        description: ""
+
+      - name: blocking_reason_order_price_quantity
+        data_type: string
+        description: ""
+
+      - name: blocking_reason_project_budget
+        data_type: string
+        description: ""
+
+      - name: manual_blocking_reason
+        data_type: string
+        description: ""
+
+      - name: vat_registration_number
+        data_type: string
+        description: ""
+
+      - name: country_of_destination_for_delivery_of_goods
+        data_type: string
+        description: ""
+
+      - name: supplying_country_for_delivery_of_goods
+        data_type: string
+        description: ""
+
+      - name: reason_code_for_payments
+        data_type: string
+        description: ""
+
+      - name: year_of_acquisition
+        data_type: string
+        description: ""
+
+      - name: period_of_acquisition
+        data_type: string
+        description: ""
+
+      - name: exchange_rate_gainloss_realized
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: exchange_rate_difference_realized_for_second_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: profit_center
+        data_type: string
+        description: ""
+
+      - name: indicator_gl_account_assigned_manually
+        data_type: string
+        description: ""
+
+      - name: joint_venture
+        data_type: string
+        description: ""
+
+      - name: recovery_indicator
+        data_type: string
+        description: ""
+
+      - name: equity_group
+        data_type: string
+        description: ""
+
+      - name: partner_account_number
+        data_type: string
+        description: ""
+
+      - name: contract_type
+        data_type: string
+        description: ""
+
+      - name: contract_number
+        data_type: string
+        description: ""
+
+      - name: flow_type
+        data_type: string
+        description: ""
+
+      - name: securities_account
+        data_type: string
+        description: ""
+
+      - name: tax_jurisdiction
+        data_type: string
+        description: ""
+
+      - name: internal_key_for_real_estate_object
+        data_type: string
+        description: ""
+
+      - name: reference_date_for_settlement
+        data_type: string
+        description: ""
+
+      - name: real_estate_option_rate
+        data_type: decimal(9,6)
+        description: ""
+
+      - name: commitment_item
+        data_type: string
+        description: ""
+
+      - name: cost_object
+        data_type: string
+        description: ""
+
+      - name: network_number_for_account_assignment
+        data_type: string
+        description: ""
+
+      - name: task_list_number_for_operations_in_order
+        data_type: string
+        description: ""
+
+      - name: general_counter_for_order
+        data_type: string
+        description: ""
+
+      - name: work_breakdown_structure_element_wbs_element
+        data_type: string
+        description: ""
+
+      - name: profitability_segment_number_co_pa
+        data_type: string
+        description: ""
+
+      - name: profitability_segment_changes_co_pa
+        data_type: string
+        description: ""
+
+      - name: blocking_reason_item_amount
+        data_type: string
+        description: ""
+
+      - name: blocking_reason_quality
+        data_type: string
+        description: ""
+
+      - name: payroll_type
+        data_type: string
+        description: ""
+
+      - name: equity_type
+        data_type: string
+        description: ""
+
+      - name: indicator_triangular_deal_within_the_eu
+        data_type: string
+        description: ""
+
+      - name: sequence_number_of_asset_line_items_in_fiscal_year
+        data_type: string
+        description: ""
+
+      - name: origin_group_as_subdivision_of_cost_element
+        data_type: string
+        description: ""
+
+      - name: amount_in_second_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_third_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_second_local_currency_for_tax_breakdown_21
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_second_local_currency_for_tax_breakdown_22
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_second_local_currency_for_tax_breakdown_23
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_third_local_currency_for_tax_breakdown_31
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_third_local_currency_for_tax_breakdown_32
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: amount_in_third_local_currency_for_tax_breakdown_33
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_amount_in_second_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_amount_in_third_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: non_deductible_input_tax_in_second_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: non_deductible_input_tax_in_third_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: cash_discount_amount_in_second_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: cash_discount_amount_in_third_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: valuation_difference_for_the_third_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: exchange_rate_difference_realized_for_third_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: method_with_which_the_local_currency_amount_was_determined
+        data_type: string
+        description: ""
+
+      - name: update_method_for_fm_fi_ca_integration
+        data_type: string
+        description: ""
+
+      - name: indicator_clearing_was_reversed
+        data_type: string
+        description: ""
+
+      - name: payment_method_supplement
+        data_type: string
+        description: ""
+
+      - name: alternative_account_number_in_company_code
+        data_type: string
+        description: ""
+
+      - name: funds_center
+        data_type: string
+        description: ""
+
+      - name: fund
+        data_type: string
+        description: ""
+
+      - name: tax_company_code
+        data_type: string
+        description: ""
+
+      - name: tax_baseoriginal_tax_base_in_second_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: tax_baseoriginal_tax_base_in_third_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: partner_profit_center
+        data_type: string
+        description: ""
+
+      - name: business_partner_reference_key_1
+        data_type: string
+        description: ""
+
+      - name: business_partner_reference_key_2
+        data_type: string
+        description: ""
+
+      - name: document_number_for_earmarked_funds
+        data_type: string
+        description: ""
+
+      - name: earmarked_funds_document_item
+        data_type: string
+        description: ""
+
+      - name: tax_amount_as_statistical_information_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: functional_area
+        data_type: string
+        description: ""
+
+      - name: number_of_line_item_in_original_document
+        data_type: string
+        description: ""
+
+      - name: indicator_negative_posting
+        data_type: string
+        description: ""
+
+      - name: payment_card_item
+        data_type: string
+        description: ""
+
+      - name: payment_cards_settlement_run
+        data_type: string
+        description: ""
+
+      - name: credit_control_area
+        data_type: string
+        description: ""
+
+      - name: payeepayer
+        data_type: string
+        description: ""
+
+      - name: reference_key_for_line_item
+        data_type: string
+        description: ""
+
+      - name: instruction_1
+        data_type: string
+        description: ""
+
+      - name: instruction_2
+        data_type: string
+        description: ""
+
+      - name: instruction_3
+        data_type: string
+        description: ""
+
+      - name: instruction_4
+        data_type: string
+        description: ""
+
+      - name: activity_code_for_gross_income_tax
+        data_type: string
+        description: ""
+
+      - name: region_state_province_county
+        data_type: string
+        description: ""
+
+      - name: distribution_type_for_employment_tax
+        data_type: string
+        description: ""
+
+      - name: indicator_items_from_payment_program_blocked
+        data_type: string
+        description: ""
+
+      - name: payment_reference
+        data_type: string
+        description: ""
+
+      - name: credit_management_hedged_amount
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: inflation_index
+        data_type: string
+        description: ""
+
+      - name: last_adjustment_date
+        data_type: string
+        description: ""
+
+      - name: account_assignment_category_for_industry_solution
+        data_type: string
+        description: ""
+
+      - name: acct_assignment_string_for_industry_specific_acct_assignmnts
+        data_type: string
+        description: ""
+
+      - name: date_for_defining_tax_rates
+        data_type: string
+        description: ""
+
+      - name: clearing_item
+        data_type: decimal(5,0)
+        description: ""
+
+      - name: currency_for_automatic_payment
+        data_type: string
+        description: ""
+
+      - name: amount_in_payment_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: business_place
+        data_type: string
+        description: ""
+
+      - name: section_code
+        data_type: string
+        description: ""
+
+      - name: activity_type
+        data_type: string
+        description: ""
+
+      - name: accounts_receivable_pledging_indicator
+        data_type: string
+        description: ""
+
+      - name: business_process
+        data_type: string
+        description: ""
+
+      - name: realized_exchange_rate_gainloss_1loccurrpart_payments
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: realized_exchange_rate_gainloss_2loc_currpart_payments
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: realized_exchange_rate_gainloss_3loccurrpart_payments
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: penalty_charge_amount_in_first_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: penalty_charge_amount_in_second_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: penalty_charge_amount_in_third_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: penalty_charge_amount_in_document_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: number_of_days_for_penalty_charge_calculation
+        data_type: int
+        description: ""
+
+      - name: reason_for_late_payment_bseg
+        data_type: string
+        description: ""
+
+      - name: grant
+        data_type: string
+        description: ""
+
+      - name: tax_portion_fi_ca_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: functional_area_long
+        data_type: string
+        description: ""
+
+      - name: item_is_in_execution
+        data_type: string
+        description: ""
+
+      - name: type_of_additional_receivable
+        data_type: string
+        description: ""
+
+      - name: internal_real_estate_master_data_code
+        data_type: string
+        description: ""
+
+      - name: funded_program
+        data_type: string
+        description: ""
+
+      - name: fiscal_year_of_clearing_document
+        data_type: string
+        description: ""
+
+      - name: ppa_exclude_indicator_bseg
+        data_type: string
+        description: ""
+
+      - name: six_character_posting_item_for_ledger
+        data_type: string
+        description: ""
+
+      - name: segment_for_segmental_reporting
+        data_type: string
+        description: ""
+
+      - name: partner_segment_for_segmental_reporting
+        data_type: string
+        description: ""
+
+      - name: partner_functional_area
+        data_type: string
+        description: ""
+
+      - name: id_for_account_details
+        data_type: string
+        description: ""
+
+      - name: cost_element
+        data_type: string
+        description: ""
+
+      - name: clearing_specific_to_ledger_groups
+        data_type: string
+        description: ""
+
+      - name: tax_document_item_number
+        data_type: string
+        description: ""
+
+      - name: billing_period_of_performance_start_date
+        data_type: string
+        description: ""
+
+      - name: billing_period_of_performance_end_date
+        data_type: string
+        description: ""
+
+      - name: ppa_fast_pay_indicator
+        data_type: string
+        description: ""
+
+      - name: production_month_date_to_find_period_and_year
+        data_type: string
+        description: ""
+
+      - name: ingested_at
+        data_type: timestamp
+        description: ""
+
+      - name: source_id
+        data_type: string
+        description: ""

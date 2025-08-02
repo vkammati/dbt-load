@@ -1,0 +1,889 @@
+version: 2
+
+models:
+  - name: md_sd_vendor_stn
+    description: ""
+    columns:
+      - name: account_number_of_supplier
+        data_type: string
+        description: ""
+
+      - name: country_id
+        data_type: string
+        description: ""
+
+      - name: country_key
+        data_type: string
+        description: ""
+
+      - name: name_1
+        data_type: string
+        description: ""
+
+      - name: name_2
+        data_type: string
+        description: ""
+
+      - name: name_3
+        data_type: string
+        description: ""
+
+      - name: name_4
+        data_type: string
+        description: ""
+
+      - name: city
+        data_type: string
+        description: ""
+
+      - name: district
+        data_type: string
+        description: ""
+
+      - name: po_box
+        data_type: string
+        description: ""
+
+      - name: po_box_postal_code
+        data_type: string
+        description: ""
+
+      - name: postal_code
+        data_type: string
+        description: ""
+
+      - name: region_state_province_county
+        data_type: string
+        description: ""
+
+      - name: sort_field
+        data_type: string
+        description: ""
+
+      - name: street_and_house_number
+        data_type: string
+        description: ""
+
+      - name: address
+        data_type: string
+        description: ""
+
+      - name: search_term_for_matchcode_search_1
+        data_type: string
+        description: ""
+
+      - name: search_term_for_matchcode_search_2
+        data_type: string
+        description: ""
+
+      - name: search_term_for_matchcode_search_3
+        data_type: string
+        description: ""
+
+      - name: title
+        data_type: string
+        description: ""
+
+      - name: train_station
+        data_type: string
+        description: ""
+
+      - name: international_location_number_part_1
+        data_type: string
+        description: ""
+
+      - name: international_location_number_part_2
+        data_type: string
+        description: ""
+
+      - name: authorization_group_lfa1
+        data_type: string
+        description: ""
+
+      - name: industry_key
+        data_type: string
+        description: ""
+
+      - name: check_digit_for_the_international_location_number
+        data_type: string
+        description: ""
+
+      - name: data_communication_line_no
+        data_type: string
+        description: ""
+
+      - name: report_key_for_data_medium_exchange
+        data_type: string
+        description: ""
+
+      - name: instruction_key_for_data_medium_exchange
+        data_type: string
+        description: ""
+
+      - name: date_on_which_the_record_was_created_lfa1
+        data_type: string
+        description: ""
+
+      - name: name_of_person_who_created_the_object_lfa1
+        data_type: string
+        description: ""
+
+      - name: isr_subscriber_number
+        data_type: string
+        description: ""
+
+      - name: group_key
+        data_type: string
+        description: ""
+
+      - name: supplier_account_group
+        data_type: string
+        description: ""
+
+      - name: customer_number
+        data_type: string
+        description: ""
+
+      - name: account_number_of_the_alternative_payee_lfa1
+        data_type: string
+        description: ""
+
+      - name: central_deletion_flag_for_master_record
+        data_type: string
+        description: ""
+
+      - name: central_posting_block
+        data_type: string
+        description: ""
+
+      - name: centrally_imposed_purchasing_block
+        data_type: string
+        description: ""
+
+      - name: language_key
+        data_type: string
+        description: ""
+
+      - name: tax_number_1
+        data_type: string
+        description: ""
+
+      - name: tax_number_2
+        data_type: string
+        description: ""
+
+      - name: indicator_business_partner_subject_to_equalization_tax
+        data_type: string
+        description: ""
+
+      - name: liable_for_vat
+        data_type: string
+        description: ""
+
+      - name: telebox_number
+        data_type: string
+        description: ""
+
+      - name: first_telephone_number
+        data_type: string
+        description: ""
+
+      - name: second_telephone_number
+        data_type: string
+        description: ""
+
+      - name: fax_number
+        data_type: string
+        description: ""
+
+      - name: teletex_number
+        data_type: string
+        description: ""
+
+      - name: telex_number
+        data_type: string
+        description: ""
+
+      - name: indicator_is_the_account_a_one_time_account
+        data_type: string
+        description: ""
+
+      - name: indicator_alternative_payee_in_document_allowed
+        data_type: string
+        description: ""
+
+      - name: company_id_of_trading_partner
+        data_type: string
+        description: ""
+
+      - name: account_number_of_the_master_record_with_fiscal_address
+        data_type: string
+        description: ""
+
+      - name: vat_registration_number
+        data_type: string
+        description: ""
+
+      - name: natural_person
+        data_type: string
+        description: ""
+
+      - name: function_that_will_be_blocked
+        data_type: string
+        description: ""
+
+      - name: place_of_birth_of_the_person_subject_to_withholding_tax
+        data_type: string
+        description: ""
+
+      - name: date_of_birth_of_the_person_subject_to_withholding_tax
+        data_type: string
+        description: ""
+
+      - name: key_for_the_sex_of_the_person_subject_to_withholding_tax
+        data_type: string
+        description: ""
+
+      - name: credit_information_number
+        data_type: string
+        description: ""
+
+      - name: last_review_external
+        data_type: string
+        description: ""
+
+      - name: vendors_qm_system
+        data_type: string
+        description: ""
+
+      - name: reference_account_group_for_one_time_account_vendor
+        data_type: string
+        description: ""
+
+      - name: po_box_city
+        data_type: string
+        description: ""
+
+      - name: plant_own_or_external
+        data_type: string
+        description: ""
+
+      - name: indicator_vendor_sub_range_relevant
+        data_type: string
+        description: ""
+
+      - name: indicator_plant_level_relevant
+        data_type: string
+        description: ""
+
+      - name: factory_calendar_key
+        data_type: string
+        description: ""
+
+      - name: status_of_data_transfer_into_subsequent_release
+        data_type: string
+        description: ""
+
+      - name: tax_jurisdiction
+        data_type: string
+        description: ""
+
+      - name: payment_block
+        data_type: string
+        description: ""
+
+      - name: standard_carrier_access_code
+        data_type: string
+        description: ""
+
+      - name: forwarding_agent_freight_group
+        data_type: string
+        description: ""
+
+      - name: transportation_zone_to_or_from_which_the_goods_are_delivered
+        data_type: string
+        description: ""
+
+      - name: indicator_alternative_payee_using_account_number_lfa1
+        data_type: string
+        description: ""
+
+      - name: service_agent_procedure_group
+        data_type: string
+        description: ""
+
+      - name: tax_type
+        data_type: string
+        description: ""
+
+      - name: tax_number_type
+        data_type: string
+        description: ""
+
+      - name: registered_for_social_insurance
+        data_type: string
+        description: ""
+
+      - name: activity_code_for_social_insurance
+        data_type: string
+        description: ""
+
+      - name: tax_number_3
+        data_type: string
+        description: ""
+
+      - name: tax_number_4
+        data_type: string
+        description: ""
+
+      - name: tax_number_5
+        data_type: string
+        description: ""
+
+      - name: tax_number_6
+        data_type: string
+        description: ""
+
+      - name: tax_split
+        data_type: string
+        description: ""
+
+      - name: tax_base_in_percentage
+        data_type: string
+        description: ""
+
+      - name: profession
+        data_type: string
+        description: ""
+
+      - name: shipment_statistics_group_transportation_service_agent
+        data_type: string
+        description: ""
+
+      - name: external_manufacturer_code_name_or_number
+        data_type: string
+        description: ""
+
+      - name: uniform_resource_locator
+        data_type: string
+        description: ""
+
+      - name: name_of_representative
+        data_type: string
+        description: ""
+
+      - name: type_of_business
+        data_type: string
+        description: ""
+
+      - name: type_of_industry
+        data_type: string
+        description: ""
+
+      - name: status_of_change_authorization_central
+        data_type: string
+        description: ""
+
+      - name: date_on_which_the_changes_were_confirmed_lfa1
+        data_type: string
+        description: ""
+
+      - name: time_of_last_change_confirmation_lfa1
+        data_type: string
+        description: ""
+
+      - name: central_deletion_block_for_master_record
+        data_type: string
+        description: ""
+
+      - name: validity_date_of_certification
+        data_type: string
+        description: ""
+
+      - name: vendor_indicator_relevant_for_proof_of_delivery
+        data_type: string
+        description: ""
+
+      - name: account_number_of_master_record_of_tax_office_responsible
+        data_type: string
+        description: ""
+
+      - name: tax_number_at_responsible_tax_authority
+        data_type: string
+        description: ""
+
+      - name: carrier_confirmation_is_expected
+        data_type: string
+        description: ""
+
+      - name: micro_company_indicator
+        data_type: string
+        description: ""
+
+      - name: terms_of_liability
+        data_type: string
+        description: ""
+
+      - name: crc_number
+        data_type: string
+        description: ""
+
+      - name: business_purpose_completed_flag_lfa1
+        data_type: string
+        description: ""
+
+      - name: rg_number
+        data_type: string
+        description: ""
+
+      - name: issued_by
+        data_type: string
+        description: ""
+
+      - name: state
+        data_type: string
+        description: ""
+
+      - name: rg_issuing_date
+        data_type: string
+        description: ""
+
+      - name: ric_number
+        data_type: string
+        description: ""
+
+      - name: foreign_national_registration
+        data_type: string
+        description: ""
+
+      - name: rne_issuing_date
+        data_type: string
+        description: ""
+
+      - name: cnae
+        data_type: string
+        description: ""
+
+      - name: legal_nature
+        data_type: string
+        description: ""
+
+      - name: crt_number
+        data_type: string
+        description: ""
+
+      - name: icms_taxpayer
+        data_type: string
+        description: ""
+
+      - name: industry_main_type
+        data_type: string
+        description: ""
+
+      - name: tax_declaration_type
+        data_type: string
+        description: ""
+
+      - name: company_size
+        data_type: string
+        description: ""
+
+      - name: declaration_regimen_for_piscofins
+        data_type: string
+        description: ""
+
+      - name: capital_amount
+        data_type: decimal(15,2)
+        description: ""
+
+      - name: currency
+        data_type: string
+        description: ""
+
+      - name: agency_location_code
+        data_type: string
+        description: ""
+
+      - name: payment_office
+        data_type: string
+        description: ""
+
+      - name: vendor_is_ppa_relevant
+        data_type: string
+        description: ""
+
+      - name: system_for_award_management_unique_entity_identifier
+        data_type: string
+        description: ""
+
+      - name: system_for_aware_management_electronic_funds_transfer_ind
+        data_type: string
+        description: ""
+
+      - name: processor_group
+        data_type: string
+        description: ""
+
+      - name: subledger_acct_preprocessing_procedure
+        data_type: string
+        description: ""
+
+      - name: pso_name_1
+        data_type: string
+        description: ""
+
+      - name: pso_name_2
+        data_type: string
+        description: ""
+
+      - name: pso_name_3
+        data_type: string
+        description: ""
+
+      - name: first_name
+        data_type: string
+        description: ""
+
+      - name: pso_title
+        data_type: string
+        description: ""
+
+      - name: house_number_is_no_longer_used_from_release_46b
+        data_type: string
+        description: ""
+
+      - name: street_no_longer_used_from_release_46b
+        data_type: string
+        description: ""
+
+      - name: transportation_chain
+        data_type: string
+        description: ""
+
+      - name: staging_time_in_days
+        data_type: decimal(3,0)
+        description: ""
+
+      - name: scheduling_procedure
+        data_type: string
+        description: ""
+
+      - name: cross_docking_relevant_for_collective_numbering
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: company_code
+        data_type: string
+        description: ""
+
+      - name: personnel_number
+        data_type: string
+        description: ""
+
+      - name: posting_block_for_company_code
+        data_type: string
+        description: ""
+
+      - name: deletion_flag_for_master_record_company_code_level
+        data_type: string
+        description: ""
+
+      - name: key_for_sorting_according_to_assignment_numbers
+        data_type: string
+        description: ""
+
+      - name: reconciliation_account_in_general_ledger
+        data_type: string
+        description: ""
+
+      - name: interest_calculation_indicator
+        data_type: string
+        description: ""
+
+      - name: list_of_respected_payment_methods
+        data_type: string
+        description: ""
+
+      - name: date_on_which_the_record_was_created_lfb1
+        data_type: string
+        description: ""
+
+      - name: name_of_person_who_created_the_object_lfb1
+        data_type: string
+        description: ""
+
+      - name: indicator_clearing_between_customer_and_vendor
+        data_type: string
+        description: ""
+
+      - name: block_key_for_payment
+        data_type: string
+        description: ""
+
+      - name: terms_of_payment_key
+        data_type: string
+        description: ""
+
+      - name: authorization_group_lfb1
+        data_type: string
+        description: ""
+
+      - name: our_account_number_with_the_vendor
+        data_type: string
+        description: ""
+
+      - name: clerk_at_vendor
+        data_type: string
+        description: ""
+
+      - name: memo
+        data_type: string
+        description: ""
+
+      - name: planning_group
+        data_type: string
+        description: ""
+
+      - name: accounting_clerk_abbreviation
+        data_type: string
+        description: ""
+
+      - name: head_office_account_number
+        data_type: string
+        description: ""
+
+      - name: account_number_of_the_alternative_payee_lfb1
+        data_type: string
+        description: ""
+
+      - name: indicator_alternative_payee_using_account_number_lfb1
+        data_type: string
+        description: ""
+
+      - name: key_date_of_last_interest_calculation
+        data_type: string
+        description: ""
+
+      - name: interest_calculation_frequency_in_months
+        data_type: string
+        description: ""
+
+      - name: date_of_the_last_interest_calculation_run
+        data_type: string
+        description: ""
+
+      - name: indicator_local_processing
+        data_type: string
+        description: ""
+
+      - name: bill_of_exchange_limit_in_local_currency
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: probable_time_until_check_is_paid
+        data_type: decimal(3,0)
+        description: ""
+
+      - name: check_flag_for_double_invoices_or_credit_memos
+        data_type: string
+        description: ""
+
+      - name: tolerance_group_for_the_business_partnergl_account
+        data_type: string
+        description: ""
+
+      - name: short_key_for_a_house_bank
+        data_type: string
+        description: ""
+
+      - name: indicator_pay_all_items_separately
+        data_type: string
+        description: ""
+
+      - name: certificate_number_of_the_withholding_tax_exemption
+        data_type: string
+        description: ""
+
+      - name: validity_date_for_withholding_tax_exemption_certificate
+        data_type: string
+        description: ""
+
+      - name: withholding_tax_code
+        data_type: string
+        description: ""
+
+      - name: subsidy_indicator_for_determining_the_reduction_rates
+        data_type: string
+        description: ""
+
+      - name: minority_indicators
+        data_type: string
+        description: ""
+
+      - name: previous_master_record_number
+        data_type: string
+        description: ""
+
+      - name: key_for_payment_grouping
+        data_type: string
+        description: ""
+
+      - name: key_for_dunning_notice_grouping
+        data_type: string
+        description: ""
+
+      - name: payment_method_supplement
+        data_type: string
+        description: ""
+
+      - name: vendor_recipient_type
+        data_type: string
+        description: ""
+
+      - name: authority_for_exemption_from_withholding_tax
+        data_type: string
+        description: ""
+
+      - name: withholding_tax_country_key
+        data_type: string
+        description: ""
+
+      - name: indicator_send_payment_advices_by_edi
+        data_type: string
+        description: ""
+
+      - name: release_approval_group
+        data_type: string
+        description: ""
+
+      - name: tolerance_group_invoice_verification
+        data_type: string
+        description: ""
+
+      - name: accounting_clerks_fax_number_at_the_customervendor
+        data_type: string
+        description: ""
+
+      - name: internet_address_of_partner_company_clerk
+        data_type: string
+        description: ""
+
+      - name: payment_terms_key_for_credit_memos
+        data_type: string
+        description: ""
+
+      - name: activity_code_for_gross_income_tax
+        data_type: string
+        description: ""
+
+      - name: distribution_type_for_employment_tax
+        data_type: string
+        description: ""
+
+      - name: indicator_for_periodic_account_statements
+        data_type: string
+        description: ""
+
+      - name: certification_date
+        data_type: string
+        description: ""
+
+      - name: status_of_change_authorization_company_code_level
+        data_type: string
+        description: ""
+
+      - name: date_on_which_the_changes_were_confirmed_lfb1
+        data_type: string
+        description: ""
+
+      - name: time_of_last_change_confirmation_lfb1
+        data_type: string
+        description: ""
+
+      - name: deletion_bock_for_master_record_company_code_level
+        data_type: string
+        description: ""
+
+      - name: accounting_clerks_telephone_number_at_business_partner
+        data_type: string
+        description: ""
+
+      - name: indicator_send_payment_advice_by_xml
+        data_type: string
+        description: ""
+
+      - name: e_mail_address_for_avis_hash_value
+        data_type: string
+        description: ""
+
+      - name: subcontractor_type
+        data_type: string
+        description: ""
+
+      - name: completion_date_of_inspection
+        data_type: string
+        description: ""
+
+      - name: offset_method
+        data_type: string
+        description: ""
+
+      - name: offset_percentage
+        data_type: string
+        description: ""
+
+      - name: average_daily_basis_points_for_purchase_cards
+        data_type: decimal(6,3)
+        description: ""
+
+      - name: vendor_is_in_execution
+        data_type: string
+        description: ""
+
+      - name: prepayment_relevance_vendor_master
+        data_type: string
+        description: ""
+
+      - name: assignment_test_group
+        data_type: string
+        description: ""
+
+      - name: main_economic_activity
+        data_type: string
+        description: ""
+
+      - name: ledger_management_expiration_date
+        data_type: string
+        description: ""
+
+      - name: business_purpose_completed_flag_lfb1
+        data_type: string
+        description: ""
+
+      - name: future_withholding_tax_code
+        data_type: string
+        description: ""
+
+      - name: validity_date_for_withholding_tax_exemption_certificate_z
+        data_type: string
+        description: ""
+
+      - name: certificate_number_of_the_withholding_tax_exemption_z
+        data_type: string
+        description: ""
+
+      - name: certification_date_for_minimum_wage
+        data_type: string
+        description: ""
+
+      - name: ingested_at
+        data_type: timestamp
+        description: ""
+
+      - name: source_id
+        data_type: string
+        description: ""

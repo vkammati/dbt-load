@@ -1,0 +1,405 @@
+version: 2
+
+models:
+  - name: md_fi_company_code_stn
+    description: ""
+    columns:
+      - name: company_code
+        data_type: string
+        description: ""
+
+      - name: name_of_company_code_or_company
+        data_type: string
+        description: ""
+
+      - name: city
+        data_type: string
+        description: ""
+
+      - name: country_key
+        data_type: string
+        description: ""
+
+      - name: currency_key
+        data_type: string
+        description: ""
+
+      - name: language_key
+        data_type: string
+        description: ""
+
+      - name: chart_of_accounts
+        data_type: string
+        description: ""
+
+      - name: maximum_exchange_rate_deviation_in_percent
+        data_type: string
+        description: ""
+
+      - name: fiscal_year_variant
+        data_type: string
+        description: ""
+
+      - name: allocation_indicator
+        data_type: string
+        description: ""
+
+      - name: company
+        data_type: string
+        description: ""
+
+      - name: address
+        data_type: string
+        description: ""
+
+      - name: vat_registration_number
+        data_type: string
+        description: ""
+
+      - name: financial_management_area
+        data_type: string
+        description: ""
+
+      - name: indicator_project_cash_management_active
+        data_type: string
+        description: ""
+
+      - name: indicator_cash_budget_management_active
+        data_type: string
+        description: ""
+
+      - name: activate_update_in_funds_management
+        data_type: string
+        description: ""
+
+      - name: jurisdiction_for_tax_calculation_tax_jurisdiction_code
+        data_type: string
+        description: ""
+
+      - name: funds_center_can_be_assigned_to_an_account_in_hr_from
+        data_type: string
+        description: ""
+
+      - name: company_code_variant_screen
+        data_type: string
+        description: ""
+
+      - name: cash_management_and_forecast_company_code
+        data_type: string
+        description: ""
+
+      - name: indicator_cash_management_activated
+        data_type: string
+        description: ""
+
+      - name: indicator_propose_current_date_as_value_date
+        data_type: string
+        description: ""
+
+      - name: indicator_discount_base_amount_is_the_net_value
+        data_type: string
+        description: ""
+
+      - name: credit_control_area
+        data_type: string
+        description: ""
+
+      - name: indicator_base_amount_for_tax_is_net_of_discount
+        data_type: string
+        description: ""
+
+      - name: rules_for_copying_from_the_sample_account_for_gl_accounts
+        data_type: string
+        description: ""
+
+      - name: indicator_business_area_financial_statements_required
+        data_type: string
+        description: ""
+
+      - name: indicator_propose_fiscal_year
+        data_type: string
+        description: ""
+
+      - name: indicator_post_translations_for_exchange_rate_differences
+        data_type: string
+        description: ""
+
+      - name: indicator_productive_company_code
+        data_type: string
+        description: ""
+
+      - name: indicator_purchase_account_processing_is_active
+        data_type: string
+        description: ""
+
+      - name: indicator_jva_active
+        data_type: string
+        description: ""
+
+      - name: indicator_financial_assets_management_active
+        data_type: string
+        description: ""
+
+      - name: indicator_no_exrate_difference_when_clearing_in_local_currency
+        data_type: string
+        description: ""
+
+      - name: indicator_updating_mm_in_cash_mgmtforecast_activated
+        data_type: string
+        description: ""
+
+      - name: indicator_updating_sd_in_cash_mgmtforecast_activated
+        data_type: string
+        description: ""
+
+      - name: indicator_company_code_is_in_another_system
+        data_type: string
+        description: ""
+
+      - name: original_key_of_the_company_code
+        data_type: string
+        description: ""
+
+      - name: chart_of_accounts_according_to_country_legislation
+        data_type: string
+        description: ""
+
+      - name: salespurchases_tax_group
+        data_type: string
+        description: ""
+
+      - name: name_of_global_company_code
+        data_type: string
+        description: ""
+
+      - name: field_status_variant
+        data_type: string
+        description: ""
+
+      - name: posting_period_variant
+        data_type: string
+        description: ""
+
+      - name: indicator_hedge_request_active
+        data_type: string
+        description: ""
+
+      - name: foreign_currency_translation_for_tax_items
+        data_type: string
+        description: ""
+
+      - name: workflow_variant
+        data_type: string
+        description: ""
+
+      - name: gl_account_authorization_check_in_inventory_management
+        data_type: string
+        description: ""
+
+      - name: gl_account_authorization_check_in_poscheduling_agreement
+        data_type: string
+        description: ""
+
+      - name: gl_account_authorization_check_in_purchase_requisitions
+        data_type: string
+        description: ""
+
+      - name: gl_account_authorization_check_in_contracts
+        data_type: string
+        description: ""
+
+      - name: indicator_document_date_as_the_basis_for_tax_determination
+        data_type: string
+        description: ""
+
+      - name: input_tax_code_for_nontaxable_transactions
+        data_type: string
+        description: ""
+
+      - name: output_tax_code_for_nontaxable_transactions
+        data_type: string
+        description: ""
+
+      - name: foreign_trade_import_data_control_in_mm_purchase_orders
+        data_type: string
+        description: ""
+
+      - name: indicator_negative_postings_permitted
+        data_type: string
+        description: ""
+
+      - name: indicator_can_credit_control_area_be_overwritten
+        data_type: string
+        description: ""
+
+      - name: indicator_extended_withholding_tax_active
+        data_type: string
+        description: ""
+
+      - name: procedure_for_setting_the_posting_date
+        data_type: string
+        description: ""
+
+      - name: inflation_method
+        data_type: string
+        description: ""
+
+      - name: funds_reservation_field_status_var
+        data_type: string
+        description: ""
+
+      - name: foreign_trade_import_data_copying_control_for_gr
+        data_type: string
+        description: ""
+
+      - name: foreign_trade_screen_ctrl_of_impdata_f_mmgoods_rececipt
+        data_type: string
+        description: ""
+
+      - name: method_for_offsetting_account_determination
+        data_type: string
+        description: ""
+
+      - name: additional_settings_variant_for_busarea_financial_statemnts
+        data_type: string
+        description: ""
+
+      - name: cost_of_sales_accounting_status
+        data_type: string
+        description: ""
+
+      - name: accounts_receivable_pledging_active
+        data_type: string
+        description: ""
+
+      - name: enable_amount_split
+        data_type: string
+        description: ""
+
+      - name: surcharge_calculation_method
+        data_type: string
+        description: ""
+
+      - name: document_type_for_provisions_for_taxes_on_services_received
+        data_type: string
+        description: ""
+
+      - name: document_type_for_journal_voucher_amount_correction
+        data_type: string
+        description: ""
+
+      - name: document_type_for_journal_voucher_tax_code_correction
+        data_type: string
+        description: ""
+
+      - name: document_type_for_remittance_challans
+        data_type: string
+        description: ""
+
+      - name: deferred_tax_rule
+        data_type: string
+        description: ""
+
+      - name: tax_reporting_date_active_in_documents
+        data_type: string
+        description: ""
+
+      - name: manage_variant_of_posting_period_for_company_codeledger
+        data_type: string
+        description: ""
+
+      - name: gl_account_authorization_check_in_shopping_cart
+        data_type: string
+        description: ""
+
+      - name: activate_account_assignment_derivation_in_funds_management
+        data_type: string
+        description: ""
+
+      - name: trading_interface_corporate_entity
+        data_type: string
+        description: ""
+
+      - name: partner_class
+        data_type: string
+        description: ""
+
+      - name: sales_organization
+        data_type: string
+        description: ""
+
+      - name: purchasing_organization
+        data_type: string
+        description: ""
+
+      - name: plant
+        data_type: string
+        description: ""
+
+      - name: 1digit_abbreviation_for_organisation
+        data_type: string
+        description: ""
+
+      - name: standard_text_code_for_a_company_code
+        data_type: string
+        description: ""
+
+      - name: customer_number
+        data_type: string
+        description: ""
+
+      - name: text_name
+        data_type: string
+        description: ""
+
+      - name: text_name2
+        data_type: string
+        description: ""
+
+      - name: invoice_sequence_number_required_for_company_code
+        data_type: string
+        description: ""
+
+      - name: title_transfer_date_required_as_translation_date_rv60bfza
+        data_type: string
+        description: ""
+
+      - name: document_type_for_cancellation_accounting_document
+        data_type: string
+        description: ""
+
+      - name: document_type_for_accounting_document
+        data_type: string
+        description: ""
+
+      - name: accounting_document_no_printout_on_invoice_flag
+        data_type: string
+        description: ""
+
+      - name: tax_condition_code_for_sales
+        data_type: string
+        description: ""
+
+      - name: alternative_reporting_currency_for_tax
+        data_type: string
+        description: ""
+
+      - name: element_in_scope_of_sabrix
+        data_type: string
+        description: ""
+
+      - name: hide_entry_in_value_help
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: ingested_at
+        data_type: timestamp
+        description: ""
+
+      - name: source_id
+        data_type: string
+        description: ""
