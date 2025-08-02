@@ -1,0 +1,2 @@
+theme: minima
+include: ['dbt_docs/dev', 'dbt_docs/tst', 'dbt_docs/uat', 'dbt_docs/prd', 'elementary/dev', 'elementary/tst', 'elementary/uat', 'elementary/prd']
