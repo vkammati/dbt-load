@@ -1,0 +1,112 @@
+name: "CD Build"
+
+on:
+  workflow_call:
+    outputs:
+      build_wheel_version:
+        value: ${{ jobs.build.outputs.build_wheel_version }}
+
+env:
+  DBT_PROJECT_SUBFOLDER: dbt_transform
+  CATALOG_NAME_PLACEHOLDER: "##catalog_name_placeholder##"
+
+jobs:
+  build:
+    name: Build edp_dbt_runner
+    environment: dev
+    runs-on: ubuntu-latest
+    outputs:
+      build_wheel_version: ${{ steps.build_wheel_version.outputs.version }}
+
+    env:
+      AZURE_TENANT_ID: ${{ secrets.RUN_SPN_TENANT_ID }}
+      CLIENT_ID: ${{ secrets.RUN_SPN_CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.RUN_SPN_CLIENT_SECRET }}
+
+      DATABRICKS_HOST: ${{ vars.DBX_HOST }}
+      DBX_HOST: ${{ vars.DBX_HOST }}
+      DBX_HTTP_PATH: ${{ vars.DBX_HTTP_PATH }}
+      DBX_UNITY_CATALOG: ${{ vars.DBX_UNITY_CATALOG }}
+      DBX_ELEMENTARY_SCHEMA: ${{ vars.DBX_ELEMENTARY_SCHEMA }}
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set SKIP_STEP variable
+        run: |
+          if [[ -z "${{ env.DBX_HOST }}" || -z "${{ env.DBX_HTTP_PATH }}" || -z "${{ env.DBX_UNITY_CATALOG }}" ]]; then
+          echo "SKIP_STEP=true" >> $GITHUB_ENV
+          else
+          echo "SKIP_STEP=false" >> $GITHUB_ENV
+          fi
+
+      - name: Set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.x"
+          cache: 'pip' # caching pip dependencies
+
+      - name: Install Python dependencies from requirements.txt
+        run: |
+          pip install -r ./requirements.txt
+
+      - name: Get access token
+        run: |
+          echo "Getting access token"
+          access_token=$(python .github/workflows/scripts/get_access_token.py)
+          echo "DBX_TOKEN=$access_token" >> "$GITHUB_ENV"
+
+      - name: Install dbt packages
+        working-directory: ./${{ env.DBT_PROJECT_SUBFOLDER }}
+        run: |
+          dbt clean
+          dbt deps
+
+      - name: Copy dbt project to dbt runner package
+        run: |
+          cd edp_dbt_runner
+          mkdir dbt
+          cp -r ../${{ env.DBT_PROJECT_SUBFOLDER }}/* ./dbt/
+          rm ./dbt/analyses -r -f
+
+      - name: Build wheel
+        run: python -m build --wheel
+
+      - name: Output wheel version
+        id: build_wheel_version
+        run: |
+          echo "Grabbing version from wheel"
+          version=$(find ./dist/*.whl | cut -d - -f 2)
+          echo "Wheel version: $version"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Generating dbt docs
+        if: env.SKIP_STEP == 'false'
+        working-directory: ./${{ env.DBT_PROJECT_SUBFOLDER }}
+        run: |
+          dbt docs generate --static
+          echo "Replacing catalog name with placeholder"
+          sed -i -e 's/${{ vars.DBX_UNITY_CATALOG }}/${{ env.CATALOG_NAME_PLACEHOLDER }}/g' ./target/static_index.html
+
+        # Publish all artifacts needed during the 'deploy' phase to the pipeline
+        # - ".github/workflows/scripts" <- contains the ci/cd scripts
+        # - "dist" <- contains the wheel that was build in the previous steps
+        # - "terraform" and "config" <- contain the terraform code and env dependent config
+        # - "alembic" and "alembic.ini" <- contain the alembic migration scripts and config
+      - name: Publish artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: v${{ steps.build_wheel_version.outputs.version }}
+          path: |
+            .github/workflows/scripts
+            dist
+            terraform
+            config
+            alembic
+            alembic.ini
+            requirements.txt
+            ${{ env.DBT_PROJECT_SUBFOLDER }}/target/static_index.html
+            notebooks

@@ -1,0 +1,164 @@
+name: "CI Upgrade DBT and python packages"
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+# ! change this to prefer to get updates in different time and day
+# ! this is set to run every month on the first day of the month at 00:00
+  schedule:
+      - cron: "0 0 1 * *"
+
+jobs:
+  create_pr_upgrade_packages:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+      with:
+        ref: main
+        fetch-depth: 0
+
+    - name: Set up python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.12.x"
+        cache: 'pip' # caching pip dependencies
+
+    - name: Install Python dependencies from requirements.txt
+      run: |
+        pip install -r ./requirements.txt
+        pip install -r ./requirements_local_dev.txt
+        pip list
+
+    - name: Setup GitHub CLI and configure git
+      run: |
+        gh auth login --with-token <<< "${{ secrets.GITHUB_TOKEN }}"
+        git config --global user.email "bot.noreply@shell.com"
+        git config --global user.name "EDP Bot"
+
+    - name: Update python packages and pin versions
+      run: |
+        echo ">>> Upgrading python packages requirements.txt"
+        python .github/workflows/scripts/upgrade_requirements.py requirements.txt
+        echo ">>> Upgrading python packages requirements_local_dev.txt"
+        python .github/workflows/scripts/upgrade_requirements.py requirements_local_dev.txt
+        pip list
+
+    - name: Upgrade DBT dependencies
+      run: |
+        cd dbt_transform
+        echo "Upgrading dbt packages..."
+        DBX_UNITY_CATALOG='' DBX_CLUSTER_ID='' dbt deps > newer_dbt_packages_versions.tmp
+        cd ..
+        python .github/workflows/scripts/upgrade_dbt_packages.py
+
+    - name: DBT dependencies upgrades PR
+      run: |
+        # ! PR variables
+        dbt_files_to_commit="dbt_transform/packages.yml"
+        dbt_packages_pr_title="Auto: Fix dbt package versions"
+        dbt_packages_pr_body="Automated PR to fix dbt package versions, please cross check for any breaking changes and merge if all looks good with your project, if not please close the PR or make necessary changes to fit your project needs."
+        update_branch_dbt="auto-fix/dbt-versions"
+        is_changed_dbt=$(git status --porcelain | grep "M dbt_transform/packages.yml" || echo "")
+        echo "Changed files: $is_changed_dbt"
+        # ! check if the file packages.yml included in is_changed_dbt
+        if [ -n "$is_changed_dbt" ]; then
+            echo "New packages.yml file detected, creating dbt packages PR..."
+            # ! check if there's a PR already open, if so close it
+            echo "Checking if there's a PR '$dbt_packages_pr_title' already open..."
+            is_pr_open=$(gh pr list --state open | grep "$dbt_packages_pr_title" || echo "")
+            if [ -n "$is_pr_open" ]; then
+                echo "PR '$dbt_packages_pr_title' already open, closing it..."
+                gh pr close $update_branch_dbt
+            fi
+
+            # ! pre-commit
+            echo "Running pre-commit..."
+            pre-commit run --files $(echo $dbt_files_to_commit) || pre-commit run --files $(echo $dbt_files_to_commit) || echo "pre-commit failed"
+
+            # ! create a new branch
+            git switch -C $update_branch_dbt
+
+            # ! Add and commit pkg changes
+            git add $dbt_files_to_commit
+            git commit -m "Automate changes. Fix dbt packages versions"
+            # ! Push changes to remote
+            git push origin $update_branch_dbt --force
+
+            # ! Create PR using gh cli
+            pr_body=`echo \# DBT packages upgrade manifest:
+            echo $dbt_packages_pr_body
+            echo "### Changes:
+            "
+            echo "$(cat dbt_transform/dbt_packages_upgrade_manifest.tmp)"`
+            gh pr create \
+            --base main \
+            --head "$update_branch_dbt" \
+            --title "$(echo $dbt_packages_pr_title)" \
+            --body "$pr_body"
+
+            # ! Switch back to main branch
+            git switch main
+        else
+            echo "No changes detected. Skipping PR creation for DBT packages."
+        fi
+    - name: PIP packages upgrades PR
+      run: |
+        # ! PR variables
+        pip_files_to_commit="requirements.txt setup.cfg requirements_local_dev.txt"
+        package_pr_title="Auto: Fix package versions"
+        package_pr_body="Automated PR to fix package versions"
+        update_branch="auto-fix/package-versions"
+
+        # ! Check for changes not staged for commit
+        is_changed=$(git status --porcelain | wc -l)
+        echo "Changed files: $is_changed"
+
+        if [ $is_changed -eq 0 ]; then
+            echo "No changes detected. Skipping PR creation."
+            exit 0
+        fi
+
+        # ! check if there's a PR already open, if so close it
+        echo "Checking if there's a PR already open..."
+        is_pr_open=$(gh pr list --state open | grep "$package_pr_title" || echo "")
+        if [ -n "$is_pr_open" ]; then
+          echo "PR '$package_pr_title' already open, closing it..."
+          gh pr close $update_branch
+        fi
+
+        # ! pre-commit
+        echo "Running pre-commit..."
+        pre-commit run --files $(echo $pip_files_to_commit) || pre-commit run --files $(echo $pip_files_to_commit) || echo "pre-commit failed"
+
+        # ! stash changes
+        echo "Stashing changes..."
+        git stash save pkg-upgrade
+
+        # ! New branch
+        echo "Creating new branch..."
+        git switch -C $update_branch
+
+        # ! Apply stash
+        echo "Applying stash..."
+        git stash pop stash@{0}
+
+        # ! Add and commit pkg changes
+        echo "Adding and committing changes..."
+        git status
+        git add $pip_files_to_commit
+        git commit -m "Automate changes. Fix package versions"
+
+        # ! Push changes to remote
+        echo "Pushing changes to remote..."
+        git push origin $update_branch --force
+
+        # ! Create PR using gh cli
+        gh pr create \
+        --base main \
+        --head "$update_branch" \
+        --title "$package_pr_title" \
+        --body "$package_pr_body"

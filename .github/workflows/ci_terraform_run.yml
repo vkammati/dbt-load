@@ -1,0 +1,43 @@
+name: "Terraform Plan and Config Validation for All Environments"
+
+on:
+  pull_request:
+    branches:
+      - main
+      - uat
+    paths:
+      - 'terraform/**'
+      - 'config/**'
+      - 'requirements.txt'
+      - '.github/workflows/ci_terrafom_plan.yml'
+      - '.github/workflows/cd_deploy.yml'
+  workflow_dispatch:
+
+jobs:
+  dev_plan:
+    name: "Terraform Plan for dev"
+    uses: ./.github/workflows/ci_terrafom_plan.yml
+    with:
+      environment: dev
+    secrets: inherit
+
+#  test_plan:
+#    name: "Terraform Plan for test"
+#    uses: ./.github/workflows/ci_terrafom_plan.yml
+#    with:
+#      environment: tst
+#    secrets: inherit
+
+#  uat_plan:
+#    name: "Terraform Plan for uat"
+#    uses: ./.github/workflows/ci_terrafom_plan.yml
+#    with:
+#      environment: uat
+#    secrets: inherit
+
+#  prod_plan:
+#    name: "Terraform Plan for prod"
+#    uses: ./.github/workflows/ci_terrafom_plan.yml
+#    with:
+#      environment: prd
+#    secrets: inherit

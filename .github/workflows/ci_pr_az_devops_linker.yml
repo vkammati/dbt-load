@@ -1,0 +1,12 @@
+name: "CI Pull Request Azure DevOps PBI Linker Runs"
+
+on:
+    pull_request:
+        types: [opened]
+        branches: [main, dev, uat, feature/*, bugfix/*, hotfix/*, fix/*, demo/*]
+    workflow_dispatch:
+
+jobs:
+    pr_azure_devops_pbi_linker:
+        uses: sede-x/HyperAutomation-BecomeProductive/.github/workflows/ci_pr_az_devops_linker.yaml@main
+        secrets: inherit

@@ -1,0 +1,70 @@
+name: "CI Pull Request Checks"
+
+on:
+  pull_request:
+    branches:
+      - main
+      - uat
+  workflow_dispatch:
+
+jobs:
+  pre-commit:
+    name: Run multiple checks in the code
+    runs-on: ubuntu-latest
+    environment: dev
+
+    env:
+      AZURE_TENANT_ID: ${{ secrets.RUN_SPN_TENANT_ID }}
+      CLIENT_ID: ${{ secrets.RUN_SPN_CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.RUN_SPN_CLIENT_SECRET }}
+
+      DBT_PROFILES_DIR: ./dbt_transform/
+      DBT_PROJECT_DIR: ./dbt_transform/
+      DATABRICKS_HOST: ${{ vars.DBX_HOST }}
+      DBX_HOST: ${{ vars.DBX_HOST }}
+      DBX_HTTP_PATH: ${{ vars.DBX_HTTP_PATH }}
+      DBX_CLUSTER_ID: ${{ vars.DBX_CLUSTER_ID }}
+      DBX_UNITY_CATALOG: ${{ vars.DBX_UNITY_CATALOG }}
+      DBX_ELEMENTARY_SCHEMA: ${{ vars.DBX_ELEMENTARY_SCHEMA }}
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.x"
+          cache: 'pip' # caching pip dependencies
+
+      - name: Install Python dependencies from requirements.txt
+        run: |
+          pip install -r ./requirements.txt
+
+      - name: Get access token
+        run: |
+          echo "Getting access token"
+          access_token=$(python .github/workflows/scripts/get_access_token.py)
+          echo "DBX_TOKEN=$access_token" >> "$GITHUB_ENV"
+
+      ##### Check 1 #####
+      - name: DBT connection and packages dependencies
+        run: |
+          dbt debug
+          dbt deps
+
+      - name: DBT compile
+        run: dbt compile
+
+      - name: Test DBT macros
+        run: dbt test --select "resource_type:unit_test" --vars '{"prefix_schema":False, "prefix_table":False}'
+
+      ##### Check 2 #####
+      - name: Cache pre-commit
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pre-commit/
+          key: pre-commit-4|${{ env.pythonLocation }}|${{ hashFiles('.pre-commit-config.yaml') }}
+
+      - name: Run pre-commit
+        run: pre-commit run --show-diff-on-failure --color=always --all-files

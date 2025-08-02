@@ -1,0 +1,90 @@
+name: "CI Terraform plan and config validation"
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
+
+jobs:
+  plan:
+    name: Terraform Plan and Config Validation (${{ inputs.environment }})
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+
+    env:
+      CLIENT_ID: ${{ secrets.DEPLOY_SPN_CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.DEPLOY_SPN_CLIENT_SECRET }}
+
+      AZURE_TENANT_ID: ${{ secrets.DEPLOY_SPN_TENANT_ID }}
+      AZURE_CLIENT_CERTIFICATE: ${{ secrets.DEPLOY_SPN_CLIENT_CERTIFICATE }}
+      AZURE_CLIENT_CERTIFICATE_PASSWORD: ${{ secrets.DEPLOY_SPN_CLIENT_CERTIFICATE_PASSWORD }}
+
+      TF_WORKSPACE: ${{ inputs.environment }}
+      DATABRICKS_HOST: ${{ vars.DBX_HOST }}
+      TF_VAR_run_spn_client_id: ${{ secrets.RUN_SPN_CLIENT_ID }}
+      TF_VAR_dbx_cluster_id: ${{ vars.DBX_CLUSTER_ID }}
+      TF_VAR_dbx_http_path: ${{ vars.DBX_HTTP_PATH }}
+      TF_VAR_dbx_unity_catalog: ${{ vars.DBX_UNITY_CATALOG }}
+      TF_VAR_dbt_external_raw: "${{ vars.EXTERNAL_LOCATION_URL }}/${{ vars.AZ_SA_PATH_RAW }}"
+      TF_VAR_dbt_external_euh: "${{ vars.EXTERNAL_LOCATION_URL }}/${{ vars.AZ_SA_PATH_EUH }}"
+      TF_VAR_dbt_external_eh: "${{ vars.EXTERNAL_LOCATION_URL }}/${{ vars.AZ_SA_PATH_EH }}"
+      TF_VAR_dbt_external_cur: "${{ vars.EXTERNAL_LOCATION_URL }}/${{ vars.AZ_SA_PATH_CUR }}"
+      TF_VAR_dbt_external_elementary: "${{ vars.EXTERNAL_LOCATION_URL }}/${{ vars.AZ_SA_PATH_RAW }}.elementary"
+      TF_VAR_external_location_url: ${{ vars.EXTERNAL_LOCATION_URL }}
+      TF_VAR_dbt_external_loc: ${{ vars.EXTERNAL_LOCATION_URL }}
+      TF_VAR_dbt_landing_loc: ${{ vars.LANDING_LOCATION_URL }}
+      TF_VAR_dbx_elementary_schema: ${{ vars.DBX_ELEMENTARY_SCHEMA }}
+      TF_VAR_github_organisation: ${{ github.repository_owner }}
+      TF_VAR_github_repository: ${{ github.event.repository.name }}
+      TF_VAR_githubapp_id: ${{ vars.GITHUBAPP_ID }}
+      TF_VAR_githubapp_private_key: ${{ secrets.GITHUBAPP_PRIVATE_KEY }}
+      TF_VAR_edp_dbt_runner_wheel_version: "wheel_placeholder"
+      TF_VAR_teams_webhook_url: ${{ vars.TEAMS_WEBHOOK_URL }}
+      TF_VAR_run_spn_client_secret: ${{ secrets.RUN_SPN_CLIENT_SECRET }}
+      TF_VAR_run_spn_tenant_id: ${{ secrets.RUN_SPN_TENANT_ID }}
+      TF_VAR_storage_account: ${{ vars.AZ_SA_NAME }}
+
+    steps:
+      - name: Check out
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.x"
+          cache: 'pip' # caching pip dependencies
+
+      - name: Install Python dependencies from requirements.txt
+        run: |
+          pip install -r ./requirements.txt
+
+      - name: Validate schema of yml's in the ./config/** folder
+        run: python .github/workflows/scripts/config_validation.py
+
+      - name: Get Databricks Access Token
+        run: |
+          echo "Getting Databricks access token..."
+          access_token=$(python .github/workflows/scripts/get_access_token.py)
+          echo "DATABRICKS_TOKEN=$access_token" >> "$GITHUB_ENV"
+
+      - name: Check terraform variables
+        run: python .github/workflows/scripts/check_terraform_vars.py
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.8.1
+          cli_config_credentials_hostname: app.terraform.io
+          cli_config_credentials_token: ${{ secrets.TFC_TOKEN }}
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: ./terraform
+
+      - name: Terraform Plan
+        run: |
+          terraform refresh
+          terraform plan -input=false -lock=false
+        working-directory: ./terraform

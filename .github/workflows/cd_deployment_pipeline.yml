@@ -1,0 +1,85 @@
+name: "CI/CD Deployment pipeline"
+
+on:
+  release:
+    types: released
+  push:
+    branches:
+      - uat
+      - main
+    paths:
+      - 'dbt_transform/**'
+      - 'edp_dbt_runner/**'
+      - 'terraform/**'
+      - 'config/**'
+      - 'setup.cfg'
+      - 'alembic/**'
+      - 'requirements.txt'
+      - '.github/workflows/cd_deployment_pipeline.yml'
+      - '.github/workflows/cd_build.yml'
+      - '.github/workflows/cd_deploy.yml'
+  workflow_dispatch:
+
+# This will make sure that when the workflow was triggered by a release, it
+# will receive status 'pending' if another release is already in progress. If
+# the workflow was triggered by another event (push or manual) it will
+# run as long as the git commit is different.
+concurrency: ${{ github.workflow }}-${{ github.event.action == 'released' || github.sha }}
+
+jobs:
+  build:
+    name: Build
+    uses: ./.github/workflows/cd_build.yml
+    secrets: inherit
+
+  deploy_to_dev:
+    name: Deploy to development (dev)
+    if: github.event_name == 'workflow_dispatch'
+    uses: ./.github/workflows/cd_deploy.yml
+    with:
+      environment: dev
+      wheel_name: edp_dbt_runner
+      build_wheel_version: ${{ needs.build.outputs.build_wheel_version }}
+      nr_of_wheels_to_keep: 4
+      nr_of_days_to_keep_wheel: 15
+    secrets: inherit
+    needs: build
+
+  deploy_to_tst:
+    name: Deploy to test (tst)
+    if: github.event_name == 'push' &&  github.ref == 'refs/heads/uat'
+    uses: ./.github/workflows/cd_deploy.yml
+    with:
+      environment: tst
+      wheel_name: edp_dbt_runner
+      build_wheel_version: ${{ needs.build.outputs.build_wheel_version }}
+      nr_of_wheels_to_keep: 4
+      nr_of_days_to_keep_wheel: 30
+    secrets: inherit
+    needs: build
+
+  deploy_to_pre:
+    name: Deploy to pre
+    if: github.event_name == 'release' && github.event.action == 'released'
+    uses: ./.github/workflows/cd_deploy.yml
+    with:
+      environment: tst
+      wheel_name: edp_dbt_runner
+      build_wheel_version: ${{ needs.build.outputs.build_wheel_version }}
+      nr_of_wheels_to_keep: 4
+      nr_of_days_to_keep_wheel: 60
+    secrets: inherit
+    needs: build
+
+  deploy_to_prd:
+    name: Deploy to prd
+    if: github.event_name == 'release' && github.event.action == 'released'
+    uses: ./.github/workflows/cd_deploy.yml
+    with:
+      environment: tst
+      wheel_name: edp_dbt_runner
+      build_wheel_version: ${{ needs.build.outputs.build_wheel_version }}
+      nr_of_wheels_to_keep: 4
+      nr_of_days_to_keep_wheel: 90
+    secrets: inherit
+    needs: [build, deploy_to_pre]
