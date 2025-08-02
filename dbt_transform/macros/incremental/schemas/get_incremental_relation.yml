@@ -1,0 +1,88 @@
+
+version: 2
+
+macros:
+  - name: get_incremental_relation
+    description: |
+      DBT comes with incremental support via an 'incremental' materialization. However, this only effect whether the model is loaded via
+      a 'merge' or a 'create or replace' statement. It is up to the user to filter the input to a model (using 'ref or 'source') to only
+      yield the rows that are inserted or updated since the last run. This macro add out-of-the-box support to filter the input from a
+      'ref' or 'source' using Change Delta Feed (CDF).
+      For more information on incremental loading using CDF, see:
+      NOTE: This macro should NOT be called directly. Instead it is used inside the augmented 'ref' and 'source' macro's.
+    arguments:
+      - name: source_type
+        type: string
+        description: "This can be either 'ref' or 'source' indicating whether this macro is called from the 'ref' or the 'source' macro."
+
+      - name: source_identifier
+        type: list
+        description: "A list of 2 strings uniquely identifying either the source or model node. For a 'source' the source and table name
+          is expected. For a 'ref', the package name and model identifier."
+
+      - name: source_relation
+        type: relation
+        description: "The relation object the 'ref' or 'source' macro would yield by default"
+
+      - name: cdf_incremental
+        type: boolean
+        description: "Named argument that can be passed to 'ref' or 'source'  with the value 'False' to disable the incremental cdf-based filtering logic for that reference."
+    docs:
+      show: true
+
+  - name: get_incremental_relation_post_hook
+    description: |
+      This macro is a "helper" macro to 'get_incremental_relation'. It is called as a post-hook on an incremental model to update the
+      last version loaded from a source/ref when needed.
+      NOTE: This macro should NOT be called directly. Instead it is used inside the 'get_incremental_relation' macro.
+    arguments:
+      - name: source_type
+        type: string
+        description: "This can be either 'ref' or 'source' indicating whether this macro is called from the 'ref' or the 'source' macro."
+
+      - name: source_identifier
+        type: list
+        description: "A list of 2 strings uniquely identifying either the source or model node. For a 'source' the source and table name
+          is expected. For a 'ref', the package name and model identifier."
+    docs:
+      show: false
+
+  - name: get_incremental_relation_table_property
+    description: |
+      This macro is a "helper" macro to 'get_incremental_relation' and 'get_incremental_relation_post_hook'. The sole purpose of this
+      macro is to translate a unique identification of a source or model, that is the same before _and_ during the execute phase (!)
+      into the name of the table property that holds the latest CDF commit loaded from this table. This property contains fully
+      qualified, three part name of the table in UC. This is needed because the post-hook needs to be set before the execute phase but
+      at that time, the fully qualified name of the table cannot be determined yet because the schema can (and will) change later on
+      in the process. Therefore, the post-hook will be set to call this macro with the source_type (ref or source) and unique
+      source_identifier (list of strings) before the execute phase. The actuall call is done during the execute phase both when
+      determining the value before loading the table and in the post-hook after loading the table.
+      NOTE: This macro should NOT be called directly. Instead it is used inside the 'get_incremental_relation' macro.
+    arguments:
+      - name: source_type
+        type: string
+        description: "This can be either 'ref' or 'source' indicating whether this macro is called from the 'ref' or the 'source' macro."
+
+      - name: source_identifier
+        type: list
+        description: "A list of 2 strings uniquely identifying either the source or model node. For a 'source' the source and table name
+          is expected. For a 'ref', the package name and model identifier."
+    docs:
+      show: false
+
+  - name: get_incremental_relation_source_model
+    description: |
+      This macro is a "helper" macro to 'get_incremental_relation'. It is called to find the model or source that is used in the
+      source/ref macro using the graph nodes and return it. If it cannot find the node or it finds more than one, and error will be raised.
+      NOTE: This macro should NOT be called directly. Instead it is used inside the 'get_incremental_relation' macro.
+    arguments:
+      - name: source_type
+        type: string
+        description: "This can be either 'ref' or 'source' indicating whether this macro is called from the 'ref' or the 'source' macro."
+
+      - name: source_identifier
+        type: list
+        description: "A list of 2 strings uniquely identifying either the source or model node. For a 'source' the source and table name
+          is expected. For a 'ref', the package name and model identifier."
+    docs:
+      show: false

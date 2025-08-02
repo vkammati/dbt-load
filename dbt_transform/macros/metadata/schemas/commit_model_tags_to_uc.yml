@@ -1,0 +1,68 @@
+version: 2
+
+macros:
+  - name: commit_model_tags_to_uc
+    description: "Macro that is used to apply all table and column-level tags to the UC table/view. Because tags
+      are actually meant for dbt orchestration, not all tags are per defintion meant for UC. These tags can be provided
+      as an ignore list. This macro is meant to be called from a post-hook of the model that contains the tags so they
+      can be applied when the model finishes.
+      Note: existing tags are not removed (yet). Therefore, for incremental models these need to be cleanup manually."
+    arguments:
+      - name: tags_to_ignore
+        type: list
+        description: "A list of tags (strings) that should NOT be comitted to the UC table/view."
+    docs:
+      show: true
+
+  - name: commit_all_source_tags_to_uc
+    description: "Macro that is used to apply all table and column-level tags set for 'sources' to the UC table/view.
+      It will loop over all 'sources' specified in the project and synchronize the tags set on the source with the once
+      currently set for the UC table/view. This macro is meant to be called fromm the on-run-end project hook. Because
+      tags are actually meant for dbt orchestration, not all tags are per defintion meant for UC. These tags can be
+      provided as an ignore list."
+    arguments:
+      - name: tags_to_ignore
+        type: list
+        description: "A list of tags (strings) that should NOT be comitted to the UC table/view."
+    docs:
+      show: true
+
+  - name: parse_uc_tags
+    description: "Macro that is used to work in conjunction with 'commit_schema_tags_to_uc'. It is used to parse a
+      sequence of strings named 'tags' into a dictionary with two keys: tags_with_value and tags_without_value. Both
+      will be a list of strings, properly quoted and key/values split for use in an alter statement. Any tags passed
+      in via de 'tags_to_ignore' list will be ignored."
+    arguments:
+      - name: tags
+        type: list
+        description: "A list of tags, coming from the table or column, that needs to be parsed."
+      - name: tags_to_ignore
+        type: list
+        description: "A list of tags (strings) that should NOT be comitted to the UC table/view."
+    docs:
+      show: false
+
+  - name: commit_source_tags_to_uc_sync
+    description: "This macro is meant to work in conjunction with 'commit_all_source_tags_to_uc'. It receives
+      a list of currently applied tags (current_tags), a list of all the tags that should be there (should_be_tags)
+      and a list of tags to ignore (tags_to_ignore) and caclulate all sql statements that need to be executed to
+      get from the 'current tags' to the 'should be tags' without any (optional) 'tags to ignore'. It will also
+      execute those sql statements."
+    arguments:
+      - name: table_name
+        type: string
+        description: "Fully qualified and quoted, three part name of the table/view that (should) have the tags."
+      - name: column_name
+        type: string
+        description: "(Optional) name of the column the tags should be committed to. When set to 'None', tags are set at table level"
+      - name: current_tags
+        type: list
+        description: "A list of tags that are currently commited to UC."
+      - name: should_be_tags
+        type: list
+        description: "A list of tags, that should be committed to UC."
+      - name: tags_to_ignore
+        type: list
+        description: "A list of tags (strings) that should NOT be comitted to the UC table/view."
+    docs:
+      show: false

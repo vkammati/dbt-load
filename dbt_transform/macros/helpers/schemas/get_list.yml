@@ -1,0 +1,13 @@
+version: 2
+
+macros:
+  - name: get_list
+    description: "Some model attributes in DBT will be returned as a string or a list of strings depending on whether
+      it is set to one or more elements. This macro will always return a list, even if the input is a single string.
+      If the input is an empty string or None, an empty list will be returned."
+    arguments:
+      - name: string_or_list
+        type: string or list
+        description: "The string or a list that needs to be 'as-is' or converted into signle element list."
+    docs:
+      show: true

@@ -1,0 +1,7 @@
+version: 2
+
+macros:
+  - name: add_metadata_columns
+    description: "Add 3 metadata columns to any table or view (insert_date, job_id, and run_id)."
+    docs:
+      show: true

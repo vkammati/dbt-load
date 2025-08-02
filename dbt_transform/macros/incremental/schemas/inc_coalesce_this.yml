@@ -1,0 +1,20 @@
+
+version: 2
+
+macros:
+  - name: inc_coalesce_this
+    description: |
+      It create a coalesce between the given column and the column from target table aka "this".
+      You may find a example of how to use this macro at "dbt_transform/analyses/incremental_with_join_example/source_inc_with_join.yml"
+    arguments:
+      - name: column_source
+        type: string
+        description: |
+          It's the columns source name.
+          Always add the table alias. e.g. "tb.name"
+
+      - name: column_target
+        type: string
+        description: |
+          It's the column target name.
+          Never add the table alias. It always will be "t."

@@ -1,0 +1,26 @@
+version: 2
+
+macros:
+  - name: create_source_yml
+    description: |
+       - Create DBT source yml for all the tables in the given schemas
+       - Example of how execute in the terminal:
+       >> dbt run-operation create_source_yml --args '{"all_schemas":["example_raw","dbt_example_raw","raw"]}'
+       - Example of how execute as `analyses`:
+       >> Open the file `analyses/create_source_yml.sql` and follow the instruction in the file
+       - Create a yml file and place it somewhere in the "dbt_transform/models" folder
+    arguments:
+      - name: all_schemas
+        type: list
+        description: |
+          List of all the schemas you want to get the list of tables
+          Mandatory: Yes
+          Default: n/a
+      - name: unity_catalog
+        type: string
+        description: |
+          Unity catalog name
+          Mandatory: Yes. First we check the macro argument, second the local variable $DBX_UNITY_CATALOG
+          Default: local variable $DBX_UNITY_CATALOG, otherwise empty
+    docs:
+      show: true

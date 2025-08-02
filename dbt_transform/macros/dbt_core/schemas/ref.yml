@@ -1,0 +1,9 @@
+version: 2
+
+macros:
+  - name: ref
+    description: "'ref' a dbt built-in macro described here: https://docs.getdbt.com/reference/dbt-jinja-functions/ref .
+      The 'ref' macro is augmented in this project to support out-of-the box incremental filterring on the 'ref-ed' model
+      using Change Delta Feed functionality."
+    docs:
+      show: false

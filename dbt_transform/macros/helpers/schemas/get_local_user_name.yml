@@ -1,0 +1,9 @@
+version: 2
+
+macros:
+  - name: get_local_user_name
+    description: "This macro is used in local development to get the current user name using either the 'USER' or 'USERNAME'
+      environment variable. The macro is/can be used to prefix schema or table names with the user name to avoid conflicts. The
+      value will be escaped to be used in SQL."
+    docs:
+      show: true

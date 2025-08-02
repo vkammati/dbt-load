@@ -1,0 +1,15 @@
+version: 2
+
+macros:
+  - name: execute_sql_statements_without_result
+    description: "Macro that can be used to execute a list of sql statements passed via the 'sql_statement' parameter. The statements
+      will be execute sequential."
+    arguments:
+      - name: sql_statements
+        type: list
+        description: "A list of (valid) sql statement that need to be executed."
+      - name: log_statement
+        type: boolean
+        description: "A boolean indicating whether each statement should be printed to the log before running it."
+    docs:
+      show: true

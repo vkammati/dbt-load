@@ -1,0 +1,15 @@
+version: 2
+
+macros:
+  - name: generate_date_dimension
+    description: "This macro generates a date dimension table for a given start and end year. The start_year is required, the end_year is optional. If the end_year,
+    is omitted, the 'current year plus one' (at the time of the run) will be used as the end year."
+    arguments:
+      - name: start_year
+        type: int
+        description: "This is the start year for which the date dimension is generated. The date dimension will start at January 1st of this year."
+      - name: end_year
+        type: int
+        description: "(Optional) This is the end year for which the date dimension is generated. The date dimension will end at December 31st of this year. If not provided, one year after the current year is used as the end year."
+    docs:
+      show: true

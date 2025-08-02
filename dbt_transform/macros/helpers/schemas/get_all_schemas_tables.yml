@@ -1,0 +1,23 @@
+version: 2
+
+macros:
+  - name: get_all_schemas_tables
+    description: |
+      Get the list of all tables for the given schemas
+      It returns a list of list with unity catalog, schema and table name.
+      Example: [['dev_prod_dbt_poc_unitycatalog_dev', 'example_raw', 'customer'],['dev_prod_dbt_poc_unitycatalog_dev', 'example_raw', 'order']]
+    arguments:
+      - name: all_schemas
+        type: list
+        description: |
+          List of all the schemas you want to get the list of tables
+          Mandatory: Yes
+          Default: n/a
+      - name: unity_catalog
+        type: string
+        description: |
+          Unity catalog name
+          Mandatory: Yes
+          Default: local variable $DBX_UNITY_CATALOG
+    docs:
+      show: true

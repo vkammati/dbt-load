@@ -1,0 +1,13 @@
+version: 2
+
+macro:
+- name: generate_schema_name
+  description: |
+    This macro defines the schema name.
+    In general the schema name is defined at dbt_project.yml otherwise it defaults to the profile.yml
+    Local-dev:
+        - Add prefix to schema name if var('prefix_schema') is true
+    Server:
+        - Don't add any prefix
+  docs:
+    show: false

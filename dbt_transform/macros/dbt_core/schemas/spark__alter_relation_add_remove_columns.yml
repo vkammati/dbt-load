@@ -1,0 +1,10 @@
+version: 2
+
+macros:
+  - name: spark__alter_relation_add_remove_columns
+    description: |
+      This macro overrules the default spark implementation of 'alter_relation_add_remove_columns' so that it can support dropping columns in an incremental materialization.
+      This is supported since delta 2.0 but not built into dbt as of this moment. Therefore, if columns need to be dropped, this macro will first generate and execute the
+      sql statement to do so and then revert back to the default spark implementation from dbt itself to add/change new columns when needed.
+    docs:
+      show: false

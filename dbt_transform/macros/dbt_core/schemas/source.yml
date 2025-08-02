@@ -1,0 +1,9 @@
+version: 2
+
+macros:
+  - name: source
+    description: "'source' a dbt built-in macro described here: https://docs.getdbt.com/reference/dbt-jinja-functions/source .
+      The 'source' macro is augmented in this project to support out-of-the-box incremental filterring on the refered to 'source'
+      using Change Delta Feed functionality."
+    docs:
+      show: false

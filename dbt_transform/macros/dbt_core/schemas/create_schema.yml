@@ -1,0 +1,10 @@
+version: 2
+
+macros:
+  - name: default__create_schema
+    description: |
+      'create_schema' a dbt built-in macro.
+      Original code can be found here https://github.com/dbt-labs/dbt-core/blob/main/core/dbt/adapters/include/global_project/macros/adapters/schema.sql
+      We modify it to because we need to add the MANAGED LOCATION to the schema metadata.
+    docs:
+      show: false

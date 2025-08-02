@@ -1,0 +1,34 @@
+
+version: 2
+
+macros:
+  - name: apply_scd_type_2
+    description: |
+      Generate CTE's to apply SCD type 2 to a given dataset. The last generate cte is named after the value provided for
+      'input_cte_name' with '_scd' appended to it. It and can be used to 'select from' or used in aditional CTE's
+    arguments:
+      - name: input_cte_name
+        type: string
+        description: "the name of the cte in your model that contains that dataset that should be transformed."
+
+      - name: unique_key_columns
+        type: list
+        description: "an array with the name(s) of one or more columns in the dataset that form the unique
+      / business key used in the transformation."
+
+      - name: valid_from_column
+        type: string
+        description: "name of the column that holds the point in time from whereon the row is valid. This
+      can be a date or a timestamp."
+
+      - name: exclude_from_check_columns
+        type: list
+        description: "(optional) an array with the name(s) of all the columns that should be ignored when check
+      if a row has changed. Default = []"
+
+      - name: first_valid_from_date
+        type: date or timestamp
+        description: "(optional) date or timestamp to be used as the value for 'valid_from' for the first occurrence
+      of the provided unique key(s). When motted, the value of the column provided as 'valid_from_column' will be used. Default = '9999-12-31'"
+    docs:
+      show: true

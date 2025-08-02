@@ -1,0 +1,13 @@
+version: 2
+
+macro:
+- name: generate_alias_name
+  description: |
+    This macro defines the table name.
+    In general the table name is defined by the file name or config alias
+    Local-dev:
+        - Add prefix to table name if var('prefix_table') is true
+    Server:
+        - Don't add any prefix
+  docs:
+    show: false

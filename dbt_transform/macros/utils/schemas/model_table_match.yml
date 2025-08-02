@@ -1,0 +1,7 @@
+version: 2
+
+macros:
+  - name: model_table_match
+    description: "Check if tables have a related DBT model. Macro is executed on on-run-end"
+    docs:
+      show: true

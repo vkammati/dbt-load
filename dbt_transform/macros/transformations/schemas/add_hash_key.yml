@@ -1,0 +1,13 @@
+version: 2
+
+macros:
+  - name: add_hash_key
+    description: "Macro which takes a list of columns that make a row unique and returns a hash key(surrogate key) called 'modelname_sk'.
+    Column list should be provided by the developer. The macro itself does not look at what makes a row unique.
+    This macro needs 'dbt_utils' package as deps because it uses the 'generate_surrogate_key()' function to generate the hash key on it."
+    arguments:
+      - name: column_list
+        type: string
+        description: "The list of column names that makes a row unique."
+    docs:
+      show: true
