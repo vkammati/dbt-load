@@ -1,1 +1,26 @@
+# This profile is for the GitAction and Wheel use.
+# Your personal local profile should be at ~/.dbt/profiles.yml
 
+dbt_transform:
+  target: git-actions
+  outputs:
+    git-actions:
+      type: databricks
+      catalog: "{{ env_var('DBX_UNITY_CATALOG') }}"
+      schema: dbt_schema_undefined
+      host: "{{ env_var('DBX_HOST') }}"
+      http_path: "{{ env_var('DBX_HTTP_PATH') }}"
+      token: "{{ env_var('DBX_TOKEN') }}"
+      threads: 4
+      send_anonymous_usage_stats: False
+elementary:
+  outputs:
+    default:
+      type: "databricks"
+      catalog: "{{ env_var('DBX_UNITY_CATALOG') }}"
+      schema: "{{ env_var('DBX_ELEMENTARY_SCHEMA') }}"
+      host: "{{ env_var('DBX_HOST') }}"
+      http_path: "{{ env_var('DBX_HTTP_PATH') }}"
+      token: "{{ env_var('DBX_TOKEN') }}"
+      threads: 4
+      send_anonymous_usage_stats: False
