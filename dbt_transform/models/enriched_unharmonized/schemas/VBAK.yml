@@ -1,0 +1,2343 @@
+version: 2
+
+models:
+
+  - name: VBAK
+
+    description: ""
+
+    columns:
+
+      - name: mandt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbeln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: erdat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: erzet
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ernam
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: angdt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bnddt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: audat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: trvog
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: auart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: augru
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gwldt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: submi
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lifsk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: faksk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: netwr
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: waerk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vkorg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vtweg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vkgrp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vkbur
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gsber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gskst
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: guebg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gueen
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: knumv
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vdatu
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vprgr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: autlf
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbkla
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbklt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kalsm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vsbed
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fkara
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: awahr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ktext
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bstnk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bsark
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bstdk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bstzd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ihrez
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bname
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: telf1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mahza
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: mahdt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kunnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kostl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stafo
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stwae
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aedat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kvgr1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kvgr2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kvgr3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kvgr4
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kvgr5
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: knuma
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kokrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ps_psp_pnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kurst
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kkber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: knkli
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: grupp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sbgrp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ctlpc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cmwae
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cmfre
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cmnup
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cmngv
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: amtbl
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: hityp_pr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: abrvw
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: abdis
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vgbel
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: objnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bukrs_vf
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxk1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxk2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxk3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxk4
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxk5
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxk6
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxk7
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxk8
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxk9
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xblnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zuonr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vgtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kalsm_ch
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: agrzr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aufnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: qmnum
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbeln_grp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: scheme_grp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: abruf_part
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: abhod
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: abhov
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: abhob
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rplnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vzeit
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stceg_l
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: landtx
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xegdr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: enqueue_grp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dat_fzau
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fmbdat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vsnmr_v
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: handle
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: proli
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cont_dg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: crm_guid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: upd_tmstmp
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: msr_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tm_ctrl_key
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: handoverloc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zrel_date
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zrel_time
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zsti_sctind
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zsti_ind
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ziata
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zicao
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zctype
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zeuse
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zndest
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zshmis
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zfrepo
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zrefno
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zregno
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ztrtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zsttim
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zentim
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: z_cutoff_date
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: z_cutoff_time
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: z_timezone
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: psm_budat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: swenr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: smenr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: phase
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mtlaur
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stage
+
+        data_type: int
+
+        description: ""
+
+
+
+      - name: hb_cont_reason
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hb_expdate
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hb_resdate
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oid_extbol
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oid_miscdl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oidmsg_shp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oidsts_shp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oipipeval
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_lifnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_dcityc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_dcounc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_dregio
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_dland1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_ocityc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_ocounc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_oregio
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_oland1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_porgin
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_pdestn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_ptrip
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_pbatch
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_mot
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_aorgin
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_adestn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_truckn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oia_baselo
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiinex
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiisoil
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiptrfnc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oipartnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oilastor
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oidrc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiexgnum
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiexgtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oicheadoff
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oipbl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oidrestr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oidmsg_prd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oidmsg_qty
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oidmsg_uom
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oidmsg_dat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oidmsg_trm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oicntper
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oicntnte
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oicntpho
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oid_sortl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oid_sort2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oicfkartdi
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiaevgtype
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_ct_type_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_cust_vend_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_appr_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_appr_dt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_exec_dt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_std_ct_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_prev_ct_no
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_gplt_company
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_gplt_vname
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_gplt_doi_no
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_mk_rep_no
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_mk_rep_isq
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_dest_sale_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_life_lse_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_inv_no
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_inv_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_oblig_dt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_desk_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_eia_gina_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_ct_status_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_spot_term_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_stndedq_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_iotr_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_intra_inter
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_exres_splt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_evgn_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_evgnpd_bas
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_evgn_perd_qy
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_preim_tm_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_prim_tm_qy
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_sec_tm_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_sec_tm_qy
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_exp_notif_dt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_intit_rdt_dt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_next_rdt_dt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_rtc_dt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_rdt_n_perd
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oiu_rdt_refq_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_rtf_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_imb_prvsn_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_ffee_rmb_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_firm_intrpt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_bal_bas_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_pnty_bas_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_transp_ba
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_dly_max_t_qy
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oiu_prcs_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_spr_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_dehyd_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_compr_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_pymt_meth_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_con_matnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_con_max_qy
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_affil_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_mms_type_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiu_mms_etpay_fl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiuh_ct_no
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: logsysb
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kalcd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: multi
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sppaym
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_action_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_dtm
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: system_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zprd_ord_typ_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zvbeln_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zcur_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zcus_sld_to_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zaugru_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zsales_org_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _dataaging
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: glo_log_ref1_hd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_kvgr6
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_kvgr7
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_kvgr8
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_kvgr9
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_kvgr10
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_rereg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_cq_check
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_vrsn_status
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_transaction
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_vas_cg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_candate
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_ss
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fsh_os_stg_change
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mill_appl_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tas
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: betc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mod_allow
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cancel_allow
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pay_method
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bpn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rep_freq
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: wtysc_clm_hdr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _rescued_data
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ingested_at
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _dbt_source_relation
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aesid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerunid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aedattm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: opflag
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerecno
+
+        data_type: string
+
+        description: ""

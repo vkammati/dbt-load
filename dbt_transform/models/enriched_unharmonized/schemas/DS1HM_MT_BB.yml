@@ -1,0 +1,688 @@
+version: 2
+
+
+models:
+
+  - name: DS1HM_MT_BB
+
+    description: ""
+
+    columns:
+
+      - name: mandt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ryear
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rbukrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rldnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: docct
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: docnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: docln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gl_sirid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lfgja
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lfmon
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: refactiv
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rhoart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: refdocnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: refryear
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: refdocln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bwart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: shkzg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mgrp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: keyfig
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mb_flg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: exgtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: exgnum
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ebeln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ebelp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lifnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gr1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gr2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gr3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: prprd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kaufn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kdpos
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kunag
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbeln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: posnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: shtype
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: shnumber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rsnum
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rspos
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomtk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomit
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: docind
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mblnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mjahr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zeile
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fkber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ktgrd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zdmfr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bukrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: land1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ptype1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: werks
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bzirk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: matnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: prctr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hmprctr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: umbks
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: umwrk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ptype2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ummat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bsark
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_mot
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vsbed
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_aorgin
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oic_adestn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: wgt_uom_kg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: wgt_qty
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: vol_uom_l15
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vol_qty
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: meins
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lfimg
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: erfme
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: erfmg
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: qtyflag
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: timstp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: system_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_action_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_dtm
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: _rescued_data
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ingested_at
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _dbt_source_relation
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aesid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerunid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aedattm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: opflag
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerecno
+
+        data_type: string
+
+        description: ""

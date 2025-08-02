@@ -1,0 +1,389 @@
+version: 2
+
+models:
+  - name: ZSTVA_PE_DEX_DTL_STN
+    description: ""
+    columns:
+      - name: mandt
+        data_type: string
+        description: ""
+
+      - name: dtlnum
+        data_type: string
+        description: ""
+
+      - name: spbup
+        data_type: string
+        description: ""
+
+      - name: trco
+        data_type: string
+        description: ""
+
+      - name: pgp_owner
+        data_type: string
+        description: ""
+
+      - name: pgp_name
+        data_type: string
+        description: ""
+
+      - name: dgp_number
+        data_type: string
+        description: ""
+
+      - name: cont
+        data_type: string
+        description: ""
+
+      - name: prcl
+        data_type: string
+        description: ""
+
+      - name: cost_type
+        data_type: string
+        description: ""
+
+      - name: cost_code
+        data_type: string
+        description: ""
+
+      - name: bukrs
+        data_type: string
+        description: ""
+
+      - name: gsber
+        data_type: string
+        description: ""
+
+      - name: pgp_owner_mnem
+        data_type: string
+        description: ""
+
+      - name: classtype
+        data_type: string
+        description: ""
+
+      - name: posting_type
+        data_type: string
+        description: ""
+
+      - name: belnr
+        data_type: string
+        description: ""
+
+      - name: repl_belnr
+        data_type: string
+        description: ""
+
+      - name: vbeln
+        data_type: string
+        description: ""
+
+      - name: repl_vbeln
+        data_type: string
+        description: ""
+
+      - name: buzei
+        data_type: string
+        description: ""
+
+      - name: class_subtype
+        data_type: string
+        description: ""
+
+      - name: period
+        data_type: string
+        description: ""
+
+      - name: grade
+        data_type: string
+        description: ""
+
+      - name: matnr
+        data_type: string
+        description: ""
+
+      - name: buy_sell
+        data_type: string
+        description: ""
+
+      - name: bldate
+        data_type: string
+        description: ""
+
+      - name: qty
+        data_type: decimal(16,4)
+        description: ""
+
+      - name: qty_unit
+        data_type: string
+        description: ""
+
+      - name: duedt
+        data_type: string
+        description: ""
+
+      - name: cost_cparty_mnem
+        data_type: string
+        description: ""
+
+      - name: counterparty
+        data_type: string
+        description: ""
+
+      - name: unit_cost_val
+        data_type: decimal(13,4)
+        description: ""
+
+      - name: unit_uom
+        data_type: string
+        description: ""
+
+      - name: unit_curr
+        data_type: string
+        description: ""
+
+      - name: usd_value
+        data_type: decimal(16,4)
+        description: ""
+
+      - name: usd_value_orig
+        data_type: decimal(16,4)
+        description: ""
+
+      - name: curr_value
+        data_type: decimal(16,2)
+        description: ""
+
+      - name: curr_value_orig
+        data_type: decimal(16,2)
+        description: ""
+
+      - name: curr_code
+        data_type: string
+        description: ""
+
+      - name: wrapind
+        data_type: string
+        description: ""
+
+      - name: datae
+        data_type: string
+        description: ""
+
+      - name: trd_last_changed
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: owner
+        data_type: string
+        description: ""
+
+      - name: client
+        data_type: string
+        description: ""
+
+      - name: clientcomp
+        data_type: string
+        description: ""
+
+      - name: ttdate
+        data_type: string
+        description: ""
+
+      - name: fix_float
+        data_type: string
+        description: ""
+
+      - name: exchange
+        data_type: string
+        description: ""
+
+      - name: int_ext
+        data_type: string
+        description: ""
+
+      - name: prcenddt
+        data_type: string
+        description: ""
+
+      - name: bbl_vol
+        data_type: decimal(15,4)
+        description: ""
+
+      - name: mt_amt
+        data_type: decimal(15,4)
+        description: ""
+
+      - name: contstat
+        data_type: string
+        description: ""
+
+      - name: maturity_date
+        data_type: string
+        description: ""
+
+      - name: alloc_wgtn
+        data_type: decimal(10,4)
+        description: ""
+
+      - name: stl_curr
+        data_type: string
+        description: ""
+
+      - name: call_put
+        data_type: string
+        description: ""
+
+      - name: strike_prc
+        data_type: decimal(13,4)
+        description: ""
+
+      - name: premium
+        data_type: decimal(16,4)
+        description: ""
+
+      - name: premium_cuky
+        data_type: string
+        description: ""
+
+      - name: premium_uom
+        data_type: string
+        description: ""
+
+      - name: status
+        data_type: string
+        description: ""
+
+      - name: block_code
+        data_type: string
+        description: ""
+
+      - name: actualised
+        data_type: string
+        description: ""
+
+      - name: stlind
+        data_type: string
+        description: ""
+
+      - name: trdtype
+        data_type: string
+        description: ""
+
+      - name: cparty_int_ext
+        data_type: string
+        description: ""
+
+      - name: manual_post
+        data_type: string
+        description: ""
+
+      - name: manual_rsn
+        data_type: string
+        description: ""
+
+      - name: imarex_ref_txt
+        data_type: string
+        description: ""
+
+      - name: atl_bl_or_dc_dat
+        data_type: string
+        description: ""
+
+      - name: lsterm_flag
+        data_type: string
+        description: ""
+
+      - name: rec_last_changed
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: vesname
+        data_type: string
+        description: ""
+
+      - name: unlocked_stl_ind
+        data_type: string
+        description: ""
+
+      - name: rev_dummy
+        data_type: string
+        description: ""
+
+      - name: diff_form_ind
+        data_type: string
+        description: ""
+
+      - name: formula_name
+        data_type: string
+        description: ""
+
+      - name: formula_version
+        data_type: int
+        description: ""
+
+      - name: wet_or_dry_ind
+        data_type: string
+        description: ""
+
+      - name: mt_equiv_amt
+        data_type: decimal(13,4)
+        description: ""
+
+      - name: bbl_equiv_vol
+        data_type: decimal(13,4)
+        description: ""
+
+      - name: oil_type_code
+        data_type: string
+        description: ""
+
+      - name: inv_type_ind
+        data_type: string
+        description: ""
+
+      - name: inv_loc_code
+        data_type: string
+        description: ""
+
+      - name: cont_date
+        data_type: string
+        description: ""
+
+      - name: non_usd_value
+        data_type: decimal(17,4)
+        description: ""
+
+      - name: cost_status_code
+        data_type: string
+        description: ""
+
+      - name: ldg_loc_code
+        data_type: string
+        description: ""
+
+      - name: dch_loc_code
+        data_type: string
+        description: ""
+
+      - name: system_id
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: last_action_cd
+        data_type: string
+        description: ""
+
+      - name: _rescued_data
+        data_type: string
+        description: ""
+
+      - name: ingested_at
+        data_type: string
+        description: ""

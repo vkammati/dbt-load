@@ -1,0 +1,357 @@
+version: 2
+
+models:
+  - name: T001_TSAP
+    description: ""
+    columns:
+      - name: mandt
+        data_type: string
+        description: ""
+
+      - name: bukrs
+        data_type: string
+        description: ""
+
+      - name: butxt
+        data_type: string
+        description: ""
+
+      - name: ort01
+        data_type: string
+        description: ""
+
+      - name: land1
+        data_type: string
+        description: ""
+
+      - name: waers
+        data_type: string
+        description: ""
+
+      - name: spras
+        data_type: string
+        description: ""
+
+      - name: ktopl
+        data_type: string
+        description: ""
+
+      - name: waabw
+        data_type: string
+        description: ""
+
+      - name: periv
+        data_type: string
+        description: ""
+
+      - name: kokfi
+        data_type: string
+        description: ""
+
+      - name: rcomp
+        data_type: string
+        description: ""
+
+      - name: adrnr
+        data_type: string
+        description: ""
+
+      - name: stceg
+        data_type: string
+        description: ""
+
+      - name: fikrs
+        data_type: string
+        description: ""
+
+      - name: xfmco
+        data_type: string
+        description: ""
+
+      - name: xfmcb
+        data_type: string
+        description: ""
+
+      - name: xfmca
+        data_type: string
+        description: ""
+
+      - name: txjcd
+        data_type: string
+        description: ""
+
+      - name: fmhrdate
+        data_type: string
+        description: ""
+
+      - name: buvar
+        data_type: string
+        description: ""
+
+      - name: fdbuk
+        data_type: string
+        description: ""
+
+      - name: xfdis
+        data_type: string
+        description: ""
+
+      - name: xvalv
+        data_type: string
+        description: ""
+
+      - name: xskfn
+        data_type: string
+        description: ""
+
+      - name: kkber
+        data_type: string
+        description: ""
+
+      - name: xmwsn
+        data_type: string
+        description: ""
+
+      - name: mregl
+        data_type: string
+        description: ""
+
+      - name: xgsbe
+        data_type: string
+        description: ""
+
+      - name: xgjrv
+        data_type: string
+        description: ""
+
+      - name: xkdft
+        data_type: string
+        description: ""
+
+      - name: xprod
+        data_type: string
+        description: ""
+
+      - name: xeink
+        data_type: string
+        description: ""
+
+      - name: xjvaa
+        data_type: string
+        description: ""
+
+      - name: xvvwa
+        data_type: string
+        description: ""
+
+      - name: xslta
+        data_type: string
+        description: ""
+
+      - name: xfdmm
+        data_type: string
+        description: ""
+
+      - name: xfdsd
+        data_type: string
+        description: ""
+
+      - name: xextb
+        data_type: string
+        description: ""
+
+      - name: ebukr
+        data_type: string
+        description: ""
+
+      - name: ktop2
+        data_type: string
+        description: ""
+
+      - name: umkrs
+        data_type: string
+        description: ""
+
+      - name: bukrs_glob
+        data_type: string
+        description: ""
+
+      - name: fstva
+        data_type: string
+        description: ""
+
+      - name: opvar
+        data_type: string
+        description: ""
+
+      - name: xcovr
+        data_type: string
+        description: ""
+
+      - name: txkrs
+        data_type: string
+        description: ""
+
+      - name: wfvar
+        data_type: string
+        description: ""
+
+      - name: xbbbf
+        data_type: string
+        description: ""
+
+      - name: xbbbe
+        data_type: string
+        description: ""
+
+      - name: xbbba
+        data_type: string
+        description: ""
+
+      - name: xbbko
+        data_type: string
+        description: ""
+
+      - name: xstdt
+        data_type: string
+        description: ""
+
+      - name: mwskv
+        data_type: string
+        description: ""
+
+      - name: mwska
+        data_type: string
+        description: ""
+
+      - name: impda
+        data_type: string
+        description: ""
+
+      - name: xnegp
+        data_type: string
+        description: ""
+
+      - name: xkkbi
+        data_type: string
+        description: ""
+
+      - name: wt_newwt
+        data_type: string
+        description: ""
+
+      - name: pp_pdate
+        data_type: string
+        description: ""
+
+      - name: infmt
+        data_type: string
+        description: ""
+
+      - name: fstvare
+        data_type: string
+        description: ""
+
+      - name: kopim
+        data_type: string
+        description: ""
+
+      - name: dkweg
+        data_type: string
+        description: ""
+
+      - name: offsacct
+        data_type: string
+        description: ""
+
+      - name: bapovar
+        data_type: string
+        description: ""
+
+      - name: xcos
+        data_type: string
+        description: ""
+
+      - name: xcession
+        data_type: string
+        description: ""
+
+      - name: xsplt
+        data_type: string
+        description: ""
+
+      - name: surccm
+        data_type: string
+        description: ""
+
+      - name: dtprov
+        data_type: string
+        description: ""
+
+      - name: dtamtc
+        data_type: string
+        description: ""
+
+      - name: dttaxc
+        data_type: string
+        description: ""
+
+      - name: dttdsp
+        data_type: string
+        description: ""
+
+      - name: dtaxr
+        data_type: string
+        description: ""
+
+      - name: xvatdate
+        data_type: string
+        description: ""
+
+      - name: fm_derive_acc
+        data_type: string
+        description: ""
+
+      - name: last_action_cd
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: system_id
+        data_type: string
+        description: ""
+
+      - name: zsh_comp_id
+        data_type: string
+        description: ""
+
+      - name: zfis_yr_var_id
+        data_type: string
+        description: ""
+
+      - name: zch_of_acc_id
+        data_type: string
+        description: ""
+
+      - name: pst_per_var
+        data_type: string
+        description: ""
+
+      - name: xbbsc
+        data_type: string
+        description: ""
+
+      - name: f_obsolete
+        data_type: string
+        description: ""
+
+      - name: _rescued_data
+        data_type: string
+        description: ""
+
+      - name: ingested_at
+        data_type: string
+        description: ""

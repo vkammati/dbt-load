@@ -1,0 +1,609 @@
+version: 2
+
+models:
+  - name: LFA1_STN
+    description: ""
+    columns:
+      - name: mandt
+        data_type: string
+        description: ""
+
+      - name: lifnr
+        data_type: string
+        description: ""
+
+      - name: land1
+        data_type: string
+        description: ""
+
+      - name: name1
+        data_type: string
+        description: ""
+
+      - name: name2
+        data_type: string
+        description: ""
+
+      - name: name3
+        data_type: string
+        description: ""
+
+      - name: name4
+        data_type: string
+        description: ""
+
+      - name: ort01
+        data_type: string
+        description: ""
+
+      - name: ort02
+        data_type: string
+        description: ""
+
+      - name: pfach
+        data_type: string
+        description: ""
+
+      - name: pstl2
+        data_type: string
+        description: ""
+
+      - name: pstlz
+        data_type: string
+        description: ""
+
+      - name: regio
+        data_type: string
+        description: ""
+
+      - name: sortl
+        data_type: string
+        description: ""
+
+      - name: stras
+        data_type: string
+        description: ""
+
+      - name: adrnr
+        data_type: string
+        description: ""
+
+      - name: mcod1
+        data_type: string
+        description: ""
+
+      - name: mcod2
+        data_type: string
+        description: ""
+
+      - name: mcod3
+        data_type: string
+        description: ""
+
+      - name: anred
+        data_type: string
+        description: ""
+
+      - name: bahns
+        data_type: string
+        description: ""
+
+      - name: bbbnr
+        data_type: string
+        description: ""
+
+      - name: bbsnr
+        data_type: string
+        description: ""
+
+      - name: begru
+        data_type: string
+        description: ""
+
+      - name: brsch
+        data_type: string
+        description: ""
+
+      - name: bubkz
+        data_type: string
+        description: ""
+
+      - name: datlt
+        data_type: string
+        description: ""
+
+      - name: dtams
+        data_type: string
+        description: ""
+
+      - name: dtaws
+        data_type: string
+        description: ""
+
+      - name: erdat
+        data_type: string
+        description: ""
+
+      - name: ernam
+        data_type: string
+        description: ""
+
+      - name: esrnr
+        data_type: string
+        description: ""
+
+      - name: konzs
+        data_type: string
+        description: ""
+
+      - name: ktokk
+        data_type: string
+        description: ""
+
+      - name: kunnr
+        data_type: string
+        description: ""
+
+      - name: lnrza
+        data_type: string
+        description: ""
+
+      - name: loevm
+        data_type: string
+        description: ""
+
+      - name: sperr
+        data_type: string
+        description: ""
+
+      - name: sperm
+        data_type: string
+        description: ""
+
+      - name: spras
+        data_type: string
+        description: ""
+
+      - name: stcd1
+        data_type: string
+        description: ""
+
+      - name: stcd2
+        data_type: string
+        description: ""
+
+      - name: stkza
+        data_type: string
+        description: ""
+
+      - name: stkzu
+        data_type: string
+        description: ""
+
+      - name: telbx
+        data_type: string
+        description: ""
+
+      - name: telf1
+        data_type: string
+        description: ""
+
+      - name: telf2
+        data_type: string
+        description: ""
+
+      - name: telfx
+        data_type: string
+        description: ""
+
+      - name: teltx
+        data_type: string
+        description: ""
+
+      - name: telx1
+        data_type: string
+        description: ""
+
+      - name: xcpdk
+        data_type: string
+        description: ""
+
+      - name: xzemp
+        data_type: string
+        description: ""
+
+      - name: vbund
+        data_type: string
+        description: ""
+
+      - name: fiskn
+        data_type: string
+        description: ""
+
+      - name: stceg
+        data_type: string
+        description: ""
+
+      - name: stkzn
+        data_type: string
+        description: ""
+
+      - name: sperq
+        data_type: string
+        description: ""
+
+      - name: gbort
+        data_type: string
+        description: ""
+
+      - name: gbdat
+        data_type: string
+        description: ""
+
+      - name: sexkz
+        data_type: string
+        description: ""
+
+      - name: kraus
+        data_type: string
+        description: ""
+
+      - name: revdb
+        data_type: string
+        description: ""
+
+      - name: qssys
+        data_type: string
+        description: ""
+
+      - name: ktock
+        data_type: string
+        description: ""
+
+      - name: pfort
+        data_type: string
+        description: ""
+
+      - name: werks
+        data_type: string
+        description: ""
+
+      - name: ltsna
+        data_type: string
+        description: ""
+
+      - name: werkr
+        data_type: string
+        description: ""
+
+      - name: plkal
+        data_type: string
+        description: ""
+
+      - name: duefl
+        data_type: string
+        description: ""
+
+      - name: txjcd
+        data_type: string
+        description: ""
+
+      - name: sperz
+        data_type: string
+        description: ""
+
+      - name: scacd
+        data_type: string
+        description: ""
+
+      - name: sfrgr
+        data_type: string
+        description: ""
+
+      - name: lzone
+        data_type: string
+        description: ""
+
+      - name: xlfza
+        data_type: string
+        description: ""
+
+      - name: dlgrp
+        data_type: string
+        description: ""
+
+      - name: fityp
+        data_type: string
+        description: ""
+
+      - name: stcdt
+        data_type: string
+        description: ""
+
+      - name: regss
+        data_type: string
+        description: ""
+
+      - name: actss
+        data_type: string
+        description: ""
+
+      - name: stcd3
+        data_type: string
+        description: ""
+
+      - name: stcd4
+        data_type: string
+        description: ""
+
+      - name: stcd5
+        data_type: string
+        description: ""
+
+      - name: ipisp
+        data_type: string
+        description: ""
+
+      - name: taxbs
+        data_type: string
+        description: ""
+
+      - name: profs
+        data_type: string
+        description: ""
+
+      - name: stgdl
+        data_type: string
+        description: ""
+
+      - name: emnfr
+        data_type: string
+        description: ""
+
+      - name: lfurl
+        data_type: string
+        description: ""
+
+      - name: j_1kfrepre
+        data_type: string
+        description: ""
+
+      - name: j_1kftbus
+        data_type: string
+        description: ""
+
+      - name: j_1kftind
+        data_type: string
+        description: ""
+
+      - name: confs
+        data_type: string
+        description: ""
+
+      - name: updat
+        data_type: string
+        description: ""
+
+      - name: uptim
+        data_type: string
+        description: ""
+
+      - name: nodel
+        data_type: string
+        description: ""
+
+      - name: qssysdat
+        data_type: string
+        description: ""
+
+      - name: podkzb
+        data_type: string
+        description: ""
+
+      - name: fisku
+        data_type: string
+        description: ""
+
+      - name: stenr
+        data_type: string
+        description: ""
+
+      - name: carrier_conf
+        data_type: string
+        description: ""
+
+      - name: min_comp
+        data_type: string
+        description: ""
+
+      - name: term_li
+        data_type: string
+        description: ""
+
+      - name: crc_num
+        data_type: string
+        description: ""
+
+      - name: cvp_xblck
+        data_type: string
+        description: ""
+
+      - name: rg
+        data_type: string
+        description: ""
+
+      - name: exp
+        data_type: string
+        description: ""
+
+      - name: uf
+        data_type: string
+        description: ""
+
+      - name: rgdate
+        data_type: string
+        description: ""
+
+      - name: ric
+        data_type: string
+        description: ""
+
+      - name: rne
+        data_type: string
+        description: ""
+
+      - name: rnedate
+        data_type: string
+        description: ""
+
+      - name: cnae
+        data_type: string
+        description: ""
+
+      - name: legalnat
+        data_type: string
+        description: ""
+
+      - name: crtn
+        data_type: string
+        description: ""
+
+      - name: icmstaxpay
+        data_type: string
+        description: ""
+
+      - name: indtyp
+        data_type: string
+        description: ""
+
+      - name: tdt
+        data_type: string
+        description: ""
+
+      - name: comsize
+        data_type: string
+        description: ""
+
+      - name: decregpc
+        data_type: string
+        description: ""
+
+      - name: j_sc_capital
+        data_type: decimal(15,2)
+        description: ""
+
+      - name: j_sc_currency
+        data_type: string
+        description: ""
+
+      - name: alc
+        data_type: string
+        description: ""
+
+      - name: pmt_office
+        data_type: string
+        description: ""
+
+      - name: psofg
+        data_type: string
+        description: ""
+
+      - name: psois
+        data_type: string
+        description: ""
+
+      - name: pson1
+        data_type: string
+        description: ""
+
+      - name: pson2
+        data_type: string
+        description: ""
+
+      - name: pson3
+        data_type: string
+        description: ""
+
+      - name: psovn
+        data_type: string
+        description: ""
+
+      - name: psotl
+        data_type: string
+        description: ""
+
+      - name: psohs
+        data_type: string
+        description: ""
+
+      - name: psost
+        data_type: string
+        description: ""
+
+      - name: transport_chain
+        data_type: string
+        description: ""
+
+      - name: staging_time
+        data_type: decimal(3,0)
+        description: ""
+
+      - name: scheduling_type
+        data_type: string
+        description: ""
+
+      - name: submi_relevant
+        data_type: string
+        description: ""
+
+      - name: last_action_cd
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: system_id
+        data_type: string
+        description: ""
+
+      - name: zlifnr_id
+        data_type: string
+        description: ""
+
+      - name: zktokk_id
+        data_type: string
+        description: ""
+
+      - name: zadrnr_id
+        data_type: string
+        description: ""
+
+      - name: zland1_id
+        data_type: string
+        description: ""
+
+      - name: stcd6
+        data_type: string
+        description: ""
+
+      - name: ppa_relevant
+        data_type: string
+        description: ""
+
+      - name: sam_ue_id
+        data_type: string
+        description: ""
+
+      - name: sam_eft_ind
+        data_type: string
+        description: ""
+
+      - name: _rescued_data
+        data_type: string
+        description: ""
+
+      - name: ingested_at
+        data_type: string
+        description: ""

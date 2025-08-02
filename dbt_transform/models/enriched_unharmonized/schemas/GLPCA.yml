@@ -1,0 +1,921 @@
+version: 2
+
+
+
+models:
+
+  - name: GLPCA
+
+    description: ""
+
+    columns:
+
+      - name: rclnt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gl_sirid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rldnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rrcty
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rvers
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ryear
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rtcur
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: runit
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: drcrk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: poper
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: docct
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: docnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: docln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rbukrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rprctr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rhoart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rfarea
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kokrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: racct
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hrkft
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rassc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: eprctr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: activ
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: afabe
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oclnt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sbukrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sprctr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: shoart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sfarea
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tsl
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: hsl
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: ksl
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: msl
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: cpudt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cputm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: usnam
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sgtxt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: autom
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: docty
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bldat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: budat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: wsdat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: refdocnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: refryear
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: refdocln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: refdocct
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: refactiv
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: awtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aworg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: werks
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gsber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kostl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lstar
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aufnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aufpl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anln1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anln2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: matnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bwkey
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bwtar
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anbwa
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kunnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lifnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rmvct
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ebeln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ebelp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kstrg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: erkrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: paobjnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pasubnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ps_psp_pnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kdauf
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kdpos
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fkart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vkorg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vtweg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aubel
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aupos
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbeln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: posnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vkgrp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vkbur
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbund
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: logsys
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: alebn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: awsys
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: versa
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stflg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stokz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stagr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: grtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rep_matnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: co_prznr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: imkey
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dabrz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: valut
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rscope
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: awref_rev
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aworg_rev
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bwart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: blart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zzrblgp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: system_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_action_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_dtm
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: _rescued_data
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ingested_at
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _dbt_source_relation
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aesid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerunid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aedattm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: opflag
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerecno
+
+        data_type: string
+
+        description: ""

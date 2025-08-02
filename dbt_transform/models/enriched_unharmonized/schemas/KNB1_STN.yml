@@ -1,0 +1,341 @@
+version: 2
+
+models:
+  - name: KNB1_STN
+    description: ""
+    columns:
+      - name: mandt
+        data_type: string
+        description: ""
+
+      - name: kunnr
+        data_type: string
+        description: ""
+
+      - name: bukrs
+        data_type: string
+        description: ""
+
+      - name: pernr
+        data_type: string
+        description: ""
+
+      - name: erdat
+        data_type: string
+        description: ""
+
+      - name: ernam
+        data_type: string
+        description: ""
+
+      - name: sperr
+        data_type: string
+        description: ""
+
+      - name: loevm
+        data_type: string
+        description: ""
+
+      - name: zuawa
+        data_type: string
+        description: ""
+
+      - name: busab
+        data_type: string
+        description: ""
+
+      - name: akont
+        data_type: string
+        description: ""
+
+      - name: begru
+        data_type: string
+        description: ""
+
+      - name: knrze
+        data_type: string
+        description: ""
+
+      - name: knrzb
+        data_type: string
+        description: ""
+
+      - name: zamim
+        data_type: string
+        description: ""
+
+      - name: zamiv
+        data_type: string
+        description: ""
+
+      - name: zamir
+        data_type: string
+        description: ""
+
+      - name: zamib
+        data_type: string
+        description: ""
+
+      - name: zamio
+        data_type: string
+        description: ""
+
+      - name: zwels
+        data_type: string
+        description: ""
+
+      - name: xverr
+        data_type: string
+        description: ""
+
+      - name: zahls
+        data_type: string
+        description: ""
+
+      - name: zterm
+        data_type: string
+        description: ""
+
+      - name: wakon
+        data_type: string
+        description: ""
+
+      - name: vzskz
+        data_type: string
+        description: ""
+
+      - name: zindt
+        data_type: string
+        description: ""
+
+      - name: zinrt
+        data_type: string
+        description: ""
+
+      - name: eikto
+        data_type: string
+        description: ""
+
+      - name: zsabe
+        data_type: string
+        description: ""
+
+      - name: kverm
+        data_type: string
+        description: ""
+
+      - name: fdgrv
+        data_type: string
+        description: ""
+
+      - name: vrbkz
+        data_type: string
+        description: ""
+
+      - name: vlibb
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: vrszl
+        data_type: decimal(3,0)
+        description: ""
+
+      - name: vrspr
+        data_type: decimal(3,0)
+        description: ""
+
+      - name: vrsnr
+        data_type: string
+        description: ""
+
+      - name: verdt
+        data_type: string
+        description: ""
+
+      - name: perkz
+        data_type: string
+        description: ""
+
+      - name: xdezv
+        data_type: string
+        description: ""
+
+      - name: xausz
+        data_type: string
+        description: ""
+
+      - name: webtr
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: remit
+        data_type: string
+        description: ""
+
+      - name: datlz
+        data_type: string
+        description: ""
+
+      - name: xzver
+        data_type: string
+        description: ""
+
+      - name: togru
+        data_type: string
+        description: ""
+
+      - name: kultg
+        data_type: decimal(3,0)
+        description: ""
+
+      - name: hbkid
+        data_type: string
+        description: ""
+
+      - name: xpore
+        data_type: string
+        description: ""
+
+      - name: blnkz
+        data_type: string
+        description: ""
+
+      - name: altkn
+        data_type: string
+        description: ""
+
+      - name: zgrup
+        data_type: string
+        description: ""
+
+      - name: urlid
+        data_type: string
+        description: ""
+
+      - name: mgrup
+        data_type: string
+        description: ""
+
+      - name: lockb
+        data_type: string
+        description: ""
+
+      - name: uzawe
+        data_type: string
+        description: ""
+
+      - name: ekvbd
+        data_type: string
+        description: ""
+
+      - name: sregl
+        data_type: string
+        description: ""
+
+      - name: xedip
+        data_type: string
+        description: ""
+
+      - name: frgrp
+        data_type: string
+        description: ""
+
+      - name: vrsdg
+        data_type: string
+        description: ""
+
+      - name: tlfxs
+        data_type: string
+        description: ""
+
+      - name: intad
+        data_type: string
+        description: ""
+
+      - name: xknzb
+        data_type: string
+        description: ""
+
+      - name: guzte
+        data_type: string
+        description: ""
+
+      - name: gricd
+        data_type: string
+        description: ""
+
+      - name: gridt
+        data_type: string
+        description: ""
+
+      - name: wbrsl
+        data_type: string
+        description: ""
+
+      - name: confs
+        data_type: string
+        description: ""
+
+      - name: updat
+        data_type: string
+        description: ""
+
+      - name: uptim
+        data_type: string
+        description: ""
+
+      - name: nodel
+        data_type: string
+        description: ""
+
+      - name: tlfns
+        data_type: string
+        description: ""
+
+      - name: cession_kz
+        data_type: string
+        description: ""
+
+      - name: avsnd
+        data_type: string
+        description: ""
+
+      - name: ad_hash
+        data_type: string
+        description: ""
+
+      - name: qland
+        data_type: string
+        description: ""
+
+      - name: cvp_xblck_b
+        data_type: string
+        description: ""
+
+      - name: gmvkzd
+        data_type: string
+        description: ""
+
+      - name: last_action_cd
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: system_id
+        data_type: string
+        description: ""
+
+      - name: ciiucode
+        data_type: string
+        description: ""
+
+      - name: _rescued_data
+        data_type: string
+        description: ""
+
+      - name: ingested_at
+        data_type: string
+        description: ""

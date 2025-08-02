@@ -1,0 +1,1143 @@
+version: 2
+
+models:
+
+  - name: OIJNOMH
+
+    description: ""
+
+    columns:
+
+      - name: mandt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomtk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomcl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bustyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomst
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmshtype
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmbalch
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stages_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: worklist
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sentdat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: senttime
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sentnam
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: items
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: counter1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: counter2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: counter3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: counter4
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: counter5
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: counter6
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: apo_shipment_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: apo_shipment_num
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmblock
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomtypdesc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: shtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tknum
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lov_gl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tsyst
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmshipper
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmcarrier
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cycle
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmwerk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmlgort
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmvehicle
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmvessel
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nmtplst
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: route
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bookts
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ev_group
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vktra
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: qtyin
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: qtyout
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: unit
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tst_from_min
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: tst_to_max
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bloind
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: delind
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: shnum
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: erdat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: erzeit
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ernam
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aedat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aezeit
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aenam
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ev_seq_uni
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vsart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: shtype
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vehid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tssuomv
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tssuomm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cycperd
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: cycpuom
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: carrier
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: werk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lgort
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nommsk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: shipper
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: conltm
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: conluom
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tplst
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: unlimited
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: botol
+
+        data_type: decimal(18,2)
+
+        description: ""
+
+
+
+      - name: butol
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: botolabs
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: butolabs
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bultoluom
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: balch
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: flttnomtk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: extnomnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: changenr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomstatusru
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dispatchtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dispatchrec
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: connectiontyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: railcarown
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: tariffcod
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: payertyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sendcat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sender
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: recvcat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: receiver
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pyrcat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: payer
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rowncat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: roadowner
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomnregdate
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomnvaldfrom
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nomnvaldto
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebeln_fr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebelp_fr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebeln_dm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebelp_dm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebeln_df
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebelp_df
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebeln_fr2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebelp_fr2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebeln_ot
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zebelp_ot
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zvet_source
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zvet_number
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zpeg_retrofit
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znomh_comment_1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znomh_comment_2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zfaroind
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zfscne
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zsti_sched
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zcarrier
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle4
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle5
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle6
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle7
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle8
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle9
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znmvehicle10
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_action_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_dtm
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: system_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zmd_tr_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: znom_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zveh_vess_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _rescued_data
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ingested_at
+
+        data_type: timestamp
+
+        description: ""
+
+
+
+      - name: _dbt_source_relation
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aesid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerunid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aedattm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: opflag
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerecno
+
+        data_type: string
+
+        description: ""

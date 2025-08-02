@@ -1,0 +1,911 @@
+version: 2
+
+models:
+
+  - name: ZOH_CMRDP
+
+    description: ""
+
+    columns:
+
+      - name: ohrequid
+
+        data_type: int
+
+        description: ""
+
+
+
+      - name: datapakid
+
+        data_type: int
+
+        description: ""
+
+
+
+      - name: record
+
+        data_type: int
+
+        description: ""
+
+
+
+      - name: division
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: distr_chan
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: salesorg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cust_sales
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: txtmd_custsal
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: accnt_asgn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: af_cgr10
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: af_cgr6
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: af_cgr7
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: af_cgr8
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: af_cgr9
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: af_vascg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: crm_bp_sal
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: crm_salorg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cust_cla
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cust_group
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cust_grp1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cust_grp2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cust_grp3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cust_grp4
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cust_grp5
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: c_ctr_area
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: incoterms
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: incoterms2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: plant
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pmnttrms
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sales_dist
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sales_grp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sales_off
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zsls_rep
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zlosa
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zcnl_sgp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zcnl_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zccs_typ
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zact_mgr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/znam_act
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zrel_des
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/z_sordblk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zself_bil
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: payer
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zdel_in_s
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/z_parent
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zcosa
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zuk_act
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zgk_act
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zlkam
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/znon_lkam
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zsld_ret
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zgkam
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zsam1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zsam2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zsam3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zcf_mgr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zattr3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zpayterm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: country
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pymt_meth
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zpaymeth
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: price_list
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ship_cond
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zslsarea
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zconco_n
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zrmind
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zsramemp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zbroker
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zblschd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zcustpgrp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zhrlvl6
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zhrlvl7
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zhrlvl8
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zukam
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zparent
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: accnt_grp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zactmgr_p
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zslsrep_p
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zactmgr_c
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zukam_p
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zattr2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zattr7
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zbusast
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zsbusast
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zattr8
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zattr9
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zattr10
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zgkam_p
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zgk_act_i
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zhrlvl3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zlong
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zlatt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zattr11
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zattr12
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zhrlvl4
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zhrlvl1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zhrlvl2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zhrlvl5
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zcushier
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zpb_cnty
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zfuelband
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zcrband
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zfsaband
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zengband
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zpb_cnty1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zfuel_op
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zcr_op
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zfsa_op
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zeng_op
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zpb_sts
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/znegpaacc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _rescued_data
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ingested_at
+
+        data_type: string
+
+        description: ""

@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: SKAT_TSAP
+    description: ""
+    columns:
+      - name: mandt
+        data_type: string
+        description: ""
+
+      - name: spras
+        data_type: string
+        description: ""
+
+      - name: ktopl
+        data_type: string
+        description: ""
+
+      - name: saknr
+        data_type: string
+        description: ""
+
+      - name: txt20
+        data_type: string
+        description: ""
+
+      - name: txt50
+        data_type: string
+        description: ""
+
+      - name: mcod1
+        data_type: string
+        description: ""
+
+      - name: last_action_cd
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: system_id
+        data_type: string
+        description: ""
+
+      - name: slttest123
+        data_type: string
+        description: ""
+
+      - name: _rescued_data
+        data_type: string
+        description: ""
+
+      - name: ingested_at
+        data_type: string
+        description: ""

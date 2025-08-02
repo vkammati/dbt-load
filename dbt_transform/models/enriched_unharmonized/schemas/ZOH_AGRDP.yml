@@ -1,0 +1,103 @@
+version: 2
+
+models:
+
+  - name: ZOH_AGRDP
+
+    description: ""
+
+    columns:
+
+      - name: ohrequid
+
+        data_type: int
+
+        description: ""
+
+
+
+      - name: datapakid
+
+        data_type: int
+
+        description: ""
+
+
+
+      - name: record
+
+        data_type: int
+
+        description: ""
+
+
+
+      - name: agreement
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zagr_type
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zext_desc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zsett_per
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: /bic/zreb_rec
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dateto
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: datefrom
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _rescued_data
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ingested_at
+
+        data_type: string
+
+        description: ""

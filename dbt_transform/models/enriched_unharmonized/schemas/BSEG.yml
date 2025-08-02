@@ -1,0 +1,3264 @@
+version: 2
+
+
+models:
+
+  - name: BSEG
+
+    description: "Demo of new CICD"
+
+    columns:
+
+      - name: mandt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bukrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: belnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gjahr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: buzei
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: buzid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: augdt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: augcp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: augbl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bschl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: koart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: umskz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: umsks
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zumsk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: shkzg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gsber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pargb
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mwskz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: qsskz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dmbtr
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: wrbtr
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: kzbtr
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: pswbt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: pswsl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: txbhw
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: txbfw
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: mwsts
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: wmwst
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: hwbas
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: fwbas
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: hwzuz
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: fwzuz
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: shzuz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stekz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mwart
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: txgrp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ktosl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: qsshb
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: kursr
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: gbetr
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bdiff
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bdif2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: valut
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zuonr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sgtxt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zinkz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbund
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bewar
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: altkt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vorgn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fdlev
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fdgrp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fdwbt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: fdtag
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fkont
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kokrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kostl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: projn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aufnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbeln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbel2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: posn2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: eten2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anln1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anln2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anbwa
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bzdat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pernr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xumsw
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xhres
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xkres
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xopvw
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xcpdd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xskst
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xsauf
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xspro
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xserg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xfakt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xuman
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xanet
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xskrl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xinve
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xpanz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xauto
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xncop
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xzahl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: saknr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hkont
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kunnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lifnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: filkd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xbilk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gvtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hzuon
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zfbdt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zterm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zbd1t
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: zbd2t
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: zbd3t
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: zbd1p
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: zbd2p
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: skfbt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: sknto
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: wskto
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: zlsch
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zlspr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zbfix
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hbkid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bvtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nebtr
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: mwsk1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dmbt1
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: wrbt1
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: mwsk2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dmbt2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: wrbt2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: mwsk3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dmbt3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: wrbt3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: rebzg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rebzj
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rebzz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rebzt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zollt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zolld
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lzbkz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: landl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: diekz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: samnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: abper
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vrskz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vrsdt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: disbn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: disbj
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: disbz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: wverw
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anfbn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anfbj
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anfbu
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: anfae
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: blnbt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: blnkz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: blnpz
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: mschl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mansp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: madat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: manst
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: maber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: esrnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: esrre
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: esrpz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: klibt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: qsznr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: qbshb
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: qsfbt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: navhw
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: navfw
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: matnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: werks
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: menge
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: meins
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: erfmg
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: erfme
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bpmng
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bprme
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ebeln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ebelp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zekkn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: elikz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vprsv
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: peinh
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bwkey
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bwtar
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: bustw
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rewrt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: rewwr
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bonfb
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bualt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: psalt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nprei
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: tbtkz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spgrp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spgrm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spgrt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spgrg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spgrv
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spgrq
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stceg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: egbld
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: eglld
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rstgr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ryacq
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rpacq
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rdiff
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: rdif2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: prctr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xhkom
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vname
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: recid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: egrup
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vptnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vertt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vertn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: vbewa
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: depot
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: txjcd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: imkey
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dabrz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: popts
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: fipos
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kstrg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: nplnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aufpl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aplzl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: projk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: paobjnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pasubnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spgrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: spgrc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: btype
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: etype
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xegdr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lnran
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hrkft
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dmbe2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: dmbe3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: dmb21
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: dmb22
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: dmb23
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: dmb31
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: dmb32
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: dmb33
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: mwst2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: mwst3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: navh2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: navh3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: sknt2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: sknt3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bdif3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: rdif3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: hwmet
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: glupm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xragl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: uzawe
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lokkt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fistl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: geber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: stbuk
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: txbh2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: txbh3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: pprct
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xref1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xref2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kblnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kblpos
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sttax
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: fkber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: obzei
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xnegp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: rfzei
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ccbtc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kkber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: empfb
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xref3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dtws1
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dtws2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dtws3
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: dtws4
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gricd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: grirg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gityp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xpypr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kidno
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: absbt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: idxsp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: linfv
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kontt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kontl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: txdat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: agzei
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: pycur
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pyamt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: bupla
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: secco
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: lstar
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: cession_kz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: prznr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ppdiff
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: ppdif2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: ppdif3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: penlc1
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: penlc2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: penlc3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: penfc
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: pendays
+
+        data_type: int
+
+        description: ""
+
+
+
+      - name: penrc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: grant_nbr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: sctax
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: fkber_long
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gmvkz
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: srtype
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: intreno
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: measure
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: auggj
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ppa_ex_ind
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: docln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: segment
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: psegment
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pfkber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hktid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: kstar
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xlgclr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: taxps
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pays_prov
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pays_tran
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: mndid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: xfrge_bseg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pgeber
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pgrant_nbr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: budget_pd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pbudget_pd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: perop_beg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: perop_end
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fastpay
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ignr_ivref
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: prodper
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oitaxfrom
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oitaxto
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oifultax
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oihantype
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oitaxgrp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oipricie
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiinvrec
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oitxval0
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oitxval1
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oitxval2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oitxval3
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oitxval4
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oitxval5
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oitxval6
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oioilcon
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oitaxcon
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oitaxval
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oioilcon2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oiuomqt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oitaxqt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oifutqt
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oifuttx
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oifutdt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oifutqt2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oifuttx2
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oifutdt2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oitaxgrp2
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oicimap
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oihantyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oivath
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oivatf
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: oinetcyc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oia_ipmvat
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiexgnum
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiexgtyp
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oinegpstg
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: recid_man
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oipostzero
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: oiinvcyc
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fmfgus_key
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fmxdocnr
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fmxyear
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fmxdocln
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: fmxzekkn
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_action_cd
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: last_dtm
+
+        data_type: decimal(38,18)
+
+        description: ""
+
+
+
+      - name: system_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zfint_line_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zfint_header_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zgl_acc_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zcost_ctr_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zctrl_area_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zmeins_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zvbund_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zplant_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zktosl_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: zgst_part_id
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: gst_part
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: plc_sup
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: hsn_sac
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: squan
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: re_bukrs
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: re_account
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: j_1tpbupl
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: recrf
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: inward_no
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: inward_dt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ground_no
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ground_dt
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ground_typ
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: pymtkey
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ztest_bseg_cluster
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ztest
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _rescued_data
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: ingested_at
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: _dbt_source_relation
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aesid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerunid
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aedattm
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: opflag
+
+        data_type: string
+
+        description: ""
+
+
+
+      - name: aerecno
+
+        data_type: string
+
+        description: ""

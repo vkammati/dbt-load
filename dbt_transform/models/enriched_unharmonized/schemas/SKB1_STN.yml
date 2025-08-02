@@ -1,0 +1,201 @@
+version: 2
+
+models:
+  - name: SKB1_STN
+    description: ""
+    columns:
+      - name: mandt
+        data_type: string
+        description: ""
+
+      - name: bukrs
+        data_type: string
+        description: ""
+
+      - name: saknr
+        data_type: string
+        description: ""
+
+      - name: begru
+        data_type: string
+        description: ""
+
+      - name: busab
+        data_type: string
+        description: ""
+
+      - name: datlz
+        data_type: string
+        description: ""
+
+      - name: erdat
+        data_type: string
+        description: ""
+
+      - name: ernam
+        data_type: string
+        description: ""
+
+      - name: fdgrv
+        data_type: string
+        description: ""
+
+      - name: fdlev
+        data_type: string
+        description: ""
+
+      - name: fipls
+        data_type: string
+        description: ""
+
+      - name: fstag
+        data_type: string
+        description: ""
+
+      - name: hbkid
+        data_type: string
+        description: ""
+
+      - name: hktid
+        data_type: string
+        description: ""
+
+      - name: kdfsl
+        data_type: string
+        description: ""
+
+      - name: mitkz
+        data_type: string
+        description: ""
+
+      - name: mwskz
+        data_type: string
+        description: ""
+
+      - name: stext
+        data_type: string
+        description: ""
+
+      - name: vzskz
+        data_type: string
+        description: ""
+
+      - name: waers
+        data_type: string
+        description: ""
+
+      - name: wmeth
+        data_type: string
+        description: ""
+
+      - name: xgkon
+        data_type: string
+        description: ""
+
+      - name: xintb
+        data_type: string
+        description: ""
+
+      - name: xkres
+        data_type: string
+        description: ""
+
+      - name: xloeb
+        data_type: string
+        description: ""
+
+      - name: xnkon
+        data_type: string
+        description: ""
+
+      - name: xopvw
+        data_type: string
+        description: ""
+
+      - name: xspeb
+        data_type: string
+        description: ""
+
+      - name: zindt
+        data_type: string
+        description: ""
+
+      - name: zinrt
+        data_type: string
+        description: ""
+
+      - name: zuawa
+        data_type: string
+        description: ""
+
+      - name: altkt
+        data_type: string
+        description: ""
+
+      - name: xmitk
+        data_type: string
+        description: ""
+
+      - name: recid
+        data_type: string
+        description: ""
+
+      - name: fipos
+        data_type: string
+        description: ""
+
+      - name: xmwno
+        data_type: string
+        description: ""
+
+      - name: xsalh
+        data_type: string
+        description: ""
+
+      - name: bewgp
+        data_type: string
+        description: ""
+
+      - name: infky
+        data_type: string
+        description: ""
+
+      - name: togru
+        data_type: string
+        description: ""
+
+      - name: xlgclr
+        data_type: string
+        description: ""
+
+      - name: mcakey
+        data_type: string
+        description: ""
+
+      - name: last_action_cd
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: system_id
+        data_type: string
+        description: ""
+
+      - name: zsh_comp_id
+        data_type: string
+        description: ""
+
+      - name: zgl_acc_id
+        data_type: string
+        description: ""
+
+      - name: _rescued_data
+        data_type: string
+        description: ""
+
+      - name: ingested_at
+        data_type: string
+        description: ""

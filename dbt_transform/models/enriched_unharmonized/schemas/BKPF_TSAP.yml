@@ -1,0 +1,561 @@
+version: 2
+
+models:
+  - name: BKPF_TSAP
+    description: ""
+    columns:
+      - name: mandt
+        data_type: string
+        description: ""
+
+      - name: bukrs
+        data_type: string
+        description: ""
+
+      - name: belnr
+        data_type: string
+        description: ""
+
+      - name: gjahr
+        data_type: string
+        description: ""
+
+      - name: blart
+        data_type: string
+        description: ""
+
+      - name: bldat
+        data_type: string
+        description: ""
+
+      - name: budat
+        data_type: string
+        description: ""
+
+      - name: monat
+        data_type: string
+        description: ""
+
+      - name: cpudt
+        data_type: string
+        description: ""
+
+      - name: cputm
+        data_type: string
+        description: ""
+
+      - name: aedat
+        data_type: string
+        description: ""
+
+      - name: upddt
+        data_type: string
+        description: ""
+
+      - name: wwert
+        data_type: string
+        description: ""
+
+      - name: usnam
+        data_type: string
+        description: ""
+
+      - name: tcode
+        data_type: string
+        description: ""
+
+      - name: bvorg
+        data_type: string
+        description: ""
+
+      - name: xblnr
+        data_type: string
+        description: ""
+
+      - name: dbblg
+        data_type: string
+        description: ""
+
+      - name: stblg
+        data_type: string
+        description: ""
+
+      - name: stjah
+        data_type: string
+        description: ""
+
+      - name: bktxt
+        data_type: string
+        description: ""
+
+      - name: waers
+        data_type: string
+        description: ""
+
+      - name: kursf
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: kzwrs
+        data_type: string
+        description: ""
+
+      - name: kzkrs
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: bstat
+        data_type: string
+        description: ""
+
+      - name: xnetb
+        data_type: string
+        description: ""
+
+      - name: frath
+        data_type: decimal(13,2)
+        description: ""
+
+      - name: xrueb
+        data_type: string
+        description: ""
+
+      - name: glvor
+        data_type: string
+        description: ""
+
+      - name: grpid
+        data_type: string
+        description: ""
+
+      - name: dokid
+        data_type: string
+        description: ""
+
+      - name: arcid
+        data_type: string
+        description: ""
+
+      - name: iblar
+        data_type: string
+        description: ""
+
+      - name: awtyp
+        data_type: string
+        description: ""
+
+      - name: awkey
+        data_type: string
+        description: ""
+
+      - name: fikrs
+        data_type: string
+        description: ""
+
+      - name: hwaer
+        data_type: string
+        description: ""
+
+      - name: hwae2
+        data_type: string
+        description: ""
+
+      - name: hwae3
+        data_type: string
+        description: ""
+
+      - name: kurs2
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: kurs3
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: basw2
+        data_type: string
+        description: ""
+
+      - name: basw3
+        data_type: string
+        description: ""
+
+      - name: umrd2
+        data_type: string
+        description: ""
+
+      - name: umrd3
+        data_type: string
+        description: ""
+
+      - name: xstov
+        data_type: string
+        description: ""
+
+      - name: stodt
+        data_type: string
+        description: ""
+
+      - name: xmwst
+        data_type: string
+        description: ""
+
+      - name: curt2
+        data_type: string
+        description: ""
+
+      - name: curt3
+        data_type: string
+        description: ""
+
+      - name: kuty2
+        data_type: string
+        description: ""
+
+      - name: kuty3
+        data_type: string
+        description: ""
+
+      - name: xsnet
+        data_type: string
+        description: ""
+
+      - name: ausbk
+        data_type: string
+        description: ""
+
+      - name: xusvr
+        data_type: string
+        description: ""
+
+      - name: duefl
+        data_type: string
+        description: ""
+
+      - name: awsys
+        data_type: string
+        description: ""
+
+      - name: txkrs
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: lotkz
+        data_type: string
+        description: ""
+
+      - name: xwvof
+        data_type: string
+        description: ""
+
+      - name: stgrd
+        data_type: string
+        description: ""
+
+      - name: ppnam
+        data_type: string
+        description: ""
+
+      - name: brnch
+        data_type: string
+        description: ""
+
+      - name: numpg
+        data_type: string
+        description: ""
+
+      - name: adisc
+        data_type: string
+        description: ""
+
+      - name: xref1_hd
+        data_type: string
+        description: ""
+
+      - name: xref2_hd
+        data_type: string
+        description: ""
+
+      - name: xreversal
+        data_type: string
+        description: ""
+
+      - name: reindat
+        data_type: string
+        description: ""
+
+      - name: rldnr
+        data_type: string
+        description: ""
+
+      - name: ldgrp
+        data_type: string
+        description: ""
+
+      - name: propmano
+        data_type: string
+        description: ""
+
+      - name: xblnr_alt
+        data_type: string
+        description: ""
+
+      - name: vatdate
+        data_type: string
+        description: ""
+
+      - name: psoty
+        data_type: string
+        description: ""
+
+      - name: psoak
+        data_type: string
+        description: ""
+
+      - name: psoks
+        data_type: string
+        description: ""
+
+      - name: psosg
+        data_type: string
+        description: ""
+
+      - name: psofn
+        data_type: string
+        description: ""
+
+      - name: intform
+        data_type: string
+        description: ""
+
+      - name: intdate
+        data_type: string
+        description: ""
+
+      - name: psobt
+        data_type: string
+        description: ""
+
+      - name: psozl
+        data_type: string
+        description: ""
+
+      - name: psodt
+        data_type: string
+        description: ""
+
+      - name: psotm
+        data_type: string
+        description: ""
+
+      - name: fm_umart
+        data_type: string
+        description: ""
+
+      - name: ccins
+        data_type: string
+        description: ""
+
+      - name: ccnum
+        data_type: string
+        description: ""
+
+      - name: ssblk
+        data_type: string
+        description: ""
+
+      - name: batch
+        data_type: string
+        description: ""
+
+      - name: sname
+        data_type: string
+        description: ""
+
+      - name: sampled
+        data_type: string
+        description: ""
+
+      - name: exclude_flag
+        data_type: string
+        description: ""
+
+      - name: blind
+        data_type: string
+        description: ""
+
+      - name: offset_status
+        data_type: string
+        description: ""
+
+      - name: offset_refer_dat
+        data_type: string
+        description: ""
+
+      - name: penrc
+        data_type: string
+        description: ""
+
+      - name: knumv
+        data_type: string
+        description: ""
+
+      - name: last_action_cd
+        data_type: string
+        description: ""
+
+      - name: last_dtm
+        data_type: decimal(15,0)
+        description: ""
+
+      - name: system_id
+        data_type: string
+        description: ""
+
+      - name: zfint_header_id
+        data_type: string
+        description: ""
+
+      - name: zusnam_id
+        data_type: string
+        description: ""
+
+      - name: zblart_id
+        data_type: string
+        description: ""
+
+      - name: zstblg_id
+        data_type: string
+        description: ""
+
+      - name: zawtyp_id
+        data_type: string
+        description: ""
+
+      - name: zhwaer_id
+        data_type: string
+        description: ""
+
+      - name: zcur_id
+        data_type: string
+        description: ""
+
+      - name: zsh_comp_id
+        data_type: string
+        description: ""
+
+      - name: zhwae2_id
+        data_type: string
+        description: ""
+
+      - name: zhwae3_id
+        data_type: string
+        description: ""
+
+      - name: xsplit
+        data_type: string
+        description: ""
+
+      - name: ctxkrs
+        data_type: decimal(9,5)
+        description: ""
+
+      - name: ppdat
+        data_type: string
+        description: ""
+
+      - name: pptme
+        data_type: string
+        description: ""
+
+      - name: pptcod
+        data_type: string
+        description: ""
+
+      - name: doccat
+        data_type: string
+        description: ""
+
+      - name: cash_alloc
+        data_type: string
+        description: ""
+
+      - name: follow_on
+        data_type: string
+        description: ""
+
+      - name: xreorg
+        data_type: string
+        description: ""
+
+      - name: subset
+        data_type: string
+        description: ""
+
+      - name: kurst
+        data_type: string
+        description: ""
+
+      - name: kursx
+        data_type: decimal(28,14)
+        description: ""
+
+      - name: kur2x
+        data_type: decimal(28,14)
+        description: ""
+
+      - name: kur3x
+        data_type: decimal(28,14)
+        description: ""
+
+      - name: xmca
+        data_type: string
+        description: ""
+
+      - name: resubmission
+        data_type: string
+        description: ""
+
+      - name: /sapf15/status
+        data_type: string
+        description: ""
+
+      - name: pybastyp
+        data_type: string
+        description: ""
+
+      - name: pybasno
+        data_type: string
+        description: ""
+
+      - name: pybasdat
+        data_type: string
+        description: ""
+
+      - name: pyiban
+        data_type: string
+        description: ""
+
+      - name: inwardno_hd
+        data_type: string
+        description: ""
+
+      - name: inwarddt_hd
+        data_type: string
+        description: ""
+
+      - name: slttestf1
+        data_type: string
+        description: ""
+
+      - name: slttest123
+        data_type: string
+        description: ""
+
+      - name: _rescued_data
+        data_type: string
+        description: ""
+
+      - name: ingested_at
+        data_type: string
+        description: ""
