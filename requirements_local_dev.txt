@@ -1,0 +1,6 @@
+pip-system-certs==4.0
+pytest==8.3.4
+pytest-cov==6.0.0
+python-certifi-win32==1.6.1
+sqlfluff==3.3.1
+sqlfluff-templater-dbt==3.3.1
