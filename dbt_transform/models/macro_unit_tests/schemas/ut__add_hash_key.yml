@@ -1,0 +1,33 @@
+version: 2
+
+unit_tests:
+  - name: unit_test_add_hash_key
+    model: ut__add_hash_key
+    config:
+      tags: ['unit_test']
+    given:
+      - input: this
+        format: sql # Because 'this' points to and ephemeral model, the input can only be a sql query
+        rows:
+          select 1234 as id, 'abcdef' as name, '2023-10-01 00:00:00.000' as date, 'NL' as country union all
+          select 1234 as id, 'abcdef ' as name, '2023-10-01 00:00:00.000' as date, 'NL' as country union all
+          select 1234 as id, 'ABCDEF' as name, '2023-10-01 00:00:00.000' as date, 'NL' as country union all
+          select 1234 as id, 'abcdef' as name, to_timestamp('2023-10-01') as date, 'NL' as country union all
+          select 1234 as id, 'abcdef' as name, '2023-10-01 00:00:00.000' as date, NULL as country union all
+          select 1234 as id, 'abcdef' as name, NULL as date, 'NL' as country union all
+          select 1234 as id, 'Z&12$#A' as name, '2023-10-01 00:00:00.000' as date, 'NL' as country union all
+          select 1234 as id, NULL as name, '2023-10-01 00:00:00.000' as date, 'NL' as country union all
+          select NULL as id, 'abcdef' as name, '2023-10-01 00:00:00.000' as date, 'NL' as country union all
+          select NULL as id, NULL as name, NULL as date, NULL as country
+    expect:
+      rows:
+        - {id: 1234, name: 'abcdef',   date: '2023-10-01 00:00:00.000', country: 'NL', unit_test_add_hash_key_sk: '7a9097f740fc1cc064fe8ecd322de78f'}
+        - {id: 1234, name: 'abcdef ',  date: '2023-10-01 00:00:00.000', country: 'NL', unit_test_add_hash_key_sk: 'fa0009faca04052689bf3934a4e89530'}
+        - {id: 1234, name: 'ABCDEF',   date: '2023-10-01 00:00:00.000', country: 'NL', unit_test_add_hash_key_sk: 'f66e02e75cc410e640cd7028950ea932'}
+        - {id: 1234, name: 'abcdef',   date: '2023-10-01 00:00:00',     country: 'NL', unit_test_add_hash_key_sk: '9588bcbdefcf4b6fe3e6d7d48df1924d'}
+        - {id: 1234, name: 'abcdef',   date: '2023-10-01 00:00:00.000', country: null, unit_test_add_hash_key_sk: '63df3eb6307634f5b20b3712b59bbdc7'}
+        - {id: 1234, name: 'abcdef',   date: null,                      country: 'NL', unit_test_add_hash_key_sk: '072c0d7ae578e29ae83f490b4f5764a7'}
+        - {id: 1234, name: 'Z&12$#A',  date: '2023-10-01 00:00:00.000', country: 'NL', unit_test_add_hash_key_sk: 'ae760ac420a9a055a2cd7e964e5ae278'}
+        - {id: 1234, name: null,       date: '2023-10-01 00:00:00.000', country: 'NL', unit_test_add_hash_key_sk: 'cddcfe4717ff8d9deb835872da0d7131'}
+        - {id: NULL, name: 'abcdef',   date: '2023-10-01 00:00:00.000', country: 'NL', unit_test_add_hash_key_sk: '56a82bfbbb80dfe8b02ad2d4a36f55f8'}
+        - {id: NULL, name: null,       date: null,                      country: null, unit_test_add_hash_key_sk: '577caa0f621ffaea57820ecb55fb94e5'}

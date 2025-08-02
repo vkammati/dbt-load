@@ -1,0 +1,337 @@
+version: 2
+
+sources:
+  - name: raw-ds-dbt
+    schema: raw-ds-dbt
+    catalog: "{{ env_var('DBX_UNITY_CATALOG') }}"
+    config:
+      cdf_incremental: true # comment this to enable the CDF incremental logic for the entire source
+    tables:
+      - name: KNA1_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - KUNNR
+      - name: KNA1_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - KUNNR
+      - name: LFA1_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - LIFNR
+      - name: LFA1_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - LIFNR
+      - name: LFB1_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - LIFNR
+            - BUKRS
+      - name: LFB1_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - LIFNR
+            - BUKRS
+      - name: KNB1_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - KUNNR
+            - BUKRS
+      - name: KNB1_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - KUNNR
+            - BUKRS
+      - name: SKA1_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - KTOPL
+            - SAKNR
+      - name: SKA1_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - KTOPL
+            - SAKNR
+      - name: SKB1_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - BUKRS
+            - SAKNR
+      - name: SKB1_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - BUKRS
+            - SAKNR
+      - name: SKAT_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - SPRAS
+            - KTOPL
+            - SAKNR
+      - name: SKAT_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - SPRAS
+            - KTOPL
+            - SAKNR
+      - name: T001_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - BUKRS
+      - name: T001_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - BUKRS
+      - name: BSEG_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - BUKRS
+            - BELNR
+            - GJAHR
+            - BUZEI
+      - name: BSEG_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - BUKRS
+            - BELNR
+            - GJAHR
+            - BUZEI
+      - name: BKPF_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - BUKRS
+            - BELNR
+            - GJAHR
+      - name: BKPF_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - BUKRS
+            - BELNR
+            - GJAHR
+      - name: GLIDXA_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - RCLNT
+            - AWREF
+            - AWTYP
+            - AWORG
+            - RLDNR
+            - DOCCT
+            - RYEAR
+            - DOCNR
+      - name: GLIDXA_TSAP
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - RCLNT
+            - AWREF
+            - AWTYP
+            - AWORG
+            - RLDNR
+            - DOCCT
+            - RYEAR
+            - DOCNR
+      - name: ZSTVA_PE_MC_DTL_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - DTLNUM
+            - SPBUP
+      - name: ZSTVA_PE_DEX_DTL_STN
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - DTLNUM
+      - name: OIJNOMH
+        config:
+          unique_key:
+            - MANDT
+            - NOMTK
+      - name: AECORSOFT_OIJNOMH
+        config:
+          order_by: AEDATTM
+          unique_key:
+            - MANDT
+            - NOMTK
+      - name: EKKO
+        config:
+          unique_key:
+            - MANDT
+            - EBELN
+      - name: AECORSOFT_EKKO
+        config:
+          order_by: AEDATTM
+          unique_key:
+            - MANDT
+            - EBELN
+
+      - name: BSEG
+        config:
+          order_by: LAST_DTM
+          unique_key:
+            - MANDT
+            - BUKRS
+            - BELNR
+            - GJAHR
+            - BUZEI
+      - name: AECORSOFT_BSEG
+        config:
+          order_by: AEDATTM
+          unique_key:
+            - MANDT
+            - BUKRS
+            - BELNR
+            - GJAHR
+            - BUZEI
+      - name: VBAP
+        config:
+          unique_key:
+            - MANDT
+            - VBELN
+            - POSNR
+      - name: AECORSOFT_VBAP
+        config:
+          order_by: AEDATTM
+          unique_key:
+            - MANDT
+            - VBELN
+            - POSNR
+      - name: VBAK
+        config:
+          unique_key:
+            - MANDT
+            - VBELN
+      - name: AECORSOFT_VBAK
+        config:
+          order_by: AEDATTM
+          unique_key:
+            - MANDT
+            - VBELN
+      - name: ZOH_COGDP
+        config:
+          order_by: TIMESTAMP
+          unique_key:
+            - COMP_CODE
+            - FISCPER
+            - "`/BIC/ZCOPA_VV`"
+            - PROFIT_CTR
+            - REF_DOC_NR
+            - "`/BIC/ZCO_DOCNO`"
+            - CURRENCY
+            - CURTYPE
+            - KNCOUNTER
+            - KNART
+            - AGREEMENT
+            - COSTELMNT
+            - REFER_ITM
+            - "`/BIC/ZCO_ITMNO`"
+            - "`/BIC/ZCON_UNIT`"
+            - "`/BIC/ZBUSTRANS`"
+            - "`/BIC/ZMRN_T`"
+            - "`/BIC/ZSALPRDCN`"
+            - "`/BIC/ZPRICTYP`"
+            - "`/BIC/ZBUSAST`"
+            - "`/BIC/ZBOLDT`"
+      - name: ZOH_COLDP
+        config:
+          order_by: TIMESTAMP
+          unique_key:
+            - COMP_CODE
+            - FISCPER
+            - "`/BIC/ZCOPA_VV`"
+            - PROFIT_CTR
+            - REF_DOC_NR
+            - "`/BIC/ZCO_DOCNO`"
+            - CURRENCY
+            - CURTYPE
+            - KNCOUNTER
+            - KNART
+            - AGREEMENT
+            - COSTELMNT
+            - REFER_ITM
+            - "`/BIC/ZCO_ITMNO`"
+            - "`/BIC/ZCON_UNIT`"
+            - "`/BIC/ZBUSTRANS`"
+            - "`/BIC/ZMRN_T`"
+            - "`/BIC/ZSALPRDCN`"
+            - "`/BIC/ZPRICTYP`"
+            - "`/BIC/ZBUSAST`"
+            - "`/BIC/ZBOLDT`"
+      - name: ZOH_AGRDP
+      - name: ZOH_CMRDP
+      - name: GLPCA
+        config:
+          unique_key:
+            - RCLNT
+            - GL_SIRID
+      - name: AECORSOFT_GLPCA
+        config:
+          order_by: AEDATTM
+          unique_key:
+            - RCLNT
+            - GL_SIRID
+      - name: DS1HM_MT_BB
+        config:
+          unique_key:
+            - MANDT
+            - RYEAR
+            - RBUKRS
+            - RLDNR
+            - DOCCT
+            - DOCNR
+            - DOCLN
+      - name: AECORSOFT_DS1HM_MT_BB
+        config:
+          order_by: AEDATTM
+          unique_key:
+            - MANDT
+            - RYEAR
+            - RBUKRS
+            - RLDNR
+            - DOCCT
+            - DOCNR
+            - DOCLN

@@ -1,0 +1,32 @@
+version: 2
+
+unit_tests:
+  - name: unit_test_apply_scd_type_2
+    model: ut__apply_scd_type_2
+    config:
+      tags: ['unit_test']
+    given:
+      - input: this
+        format: sql # Because 'this' points to and ephemeral model, the input can only be a sql query
+        rows: |
+          select 1 as id, 'BE' as country, '2023-01-01 00:00:00.000' as update_date union
+          select 1 as id, 'NL' as country, '2023-01-01 20:00:00.000' as update_date union
+          select 1 as id, 'ES' as country, '2023-01-20 00:00:00.000' as update_date union
+          select 2 as id, 'FR' as country, '2023-01-01' as update_date union
+          select 2 as id, 'FR' as country, '2023-01-10' as update_date union
+          select 3 as id, 'PT' as country, '2023-01-01' as update_date union
+          select 4 as id, 'PT' as country, '2023-01-01' as update_date union
+          select 5 as id, NULL as country, '2023-01-01' as update_date union
+          select 5 as id, NULL as country, '2023-01-10' as update_date union
+          select 5 as id, 'IT' as country, '2023-01-20' as update_date
+    expect:
+      format: sql
+      rows: |
+        select 1 as id, 'BE' as country, '2023-01-01 00:00:00.000' as update_date, to_timestamp('2023-01-01') as valid_from, to_timestamp('2023-01-01 19:59:59.999') as valid_to, false as is_current union
+        select 1 as id, 'NL' as country, '2023-01-01 20:00:00.000' as update_date, to_timestamp('2023-01-01 20:00:00.000') as valid_from, to_timestamp('2023-01-19 23:59:59.999') as valid_to, false as is_current union
+        select 1 as id, 'ES' as country, '2023-01-20 00:00:00.000' as update_date, to_timestamp('2023-01-20') as valid_from, to_timestamp('9999-12-31') as valid_to, true as is_current union
+        select 2 as id, 'FR' as country, '2023-01-01' as update_date, to_timestamp('2023-01-01') as valid_from, to_timestamp('9999-12-31') as valid_to, true as is_current union
+        select 3 as id, 'PT' as country, '2023-01-01' as update_date, to_timestamp('2023-01-01') as valid_from, to_timestamp('9999-12-31') as valid_to, true as is_current union
+        select 4 as id, 'PT' as country, '2023-01-01' as update_date, to_timestamp('2023-01-01') as valid_from, to_timestamp('9999-12-31') as valid_to, true as is_current union
+        select 5 as id, NULL as country, '2023-01-01' as update_date, to_timestamp('2023-01-01') as valid_from, to_timestamp('2023-01-19 23:59:59.999') as valid_to, false as is_current union
+        select 5 as id, 'IT' as country, '2023-01-20' as update_date, to_timestamp('2023-01-20') as valid_from, to_timestamp('9999-12-31') as valid_to, true as is_current

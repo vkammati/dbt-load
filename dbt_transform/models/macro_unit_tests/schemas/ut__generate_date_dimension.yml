@@ -1,0 +1,89 @@
+unit_tests:
+  - name: unit_test_generate_date_dimension_count
+    model: ut__generate_date_dimension
+    config:
+      tags: ['unit_test']
+    given:
+      - input: this
+        format: sql # Because 'this' points to and ephemeral model, the input can only be a sql query
+        rows: select 1 as dummy
+    expect:
+      rows:
+        - {year: 2022, nr_of_rows: 365}
+        - {year: 2023, nr_of_rows: 365}
+        - {year: 2024, nr_of_rows: 366}
+    overrides:
+      vars:
+        start_year: 2022
+        end_year: 2024
+        select_statement: |
+          select year, count(*) as nr_of_rows
+          from final
+          group by year
+
+
+  - name: unit_test_generate_date_dimension_no_end_date
+    model: ut__generate_date_dimension
+    config:
+      tags: ['unit_test']
+    given:
+      - input: this
+        format: sql
+        rows: select 1 as dummy
+    expect:
+      format: sql
+      rows: |
+        select
+          '2022-01-01' as min_date,
+          concat(year(current_date()) + 1, '-12-31') as max_date,
+          (year(current_date()) + 2) - 2022 as nr_of_years
+    overrides:
+      vars:
+        start_year: 2022
+        select_statement: |
+          select
+            min(date) as min_date,
+            max(date) as max_date,
+            count(distinct year) as nr_of_years
+          from final
+
+
+  - name: unit_test_generate_date_dimension_one_date
+    model: ut__generate_date_dimension
+    config:
+      tags: ['unit_test']
+    given:
+      - input: this
+        format: sql
+        rows: select 1 as dummy
+    expect:
+      rows:
+        - {
+          next_day_date: '2022-01-02',
+          year: 2022,
+          year_quarter: 20221,
+          year_month: 20221,
+          year_day_of_year: 20221,
+          quarter: 1,
+          quarter_name: 'Q1',
+          month: 1,
+          month_name: 'January',
+          month_abbr: 'Jan',
+          day: 1,
+          day_name: 'Saturday',
+          day_of_week: 6,
+          week_of_year: 52,
+          year_month_name_long: '2022-January',
+          is_weekend: true,
+          last_day_of_month: '2022-01-31',
+          is_quarter_start: true,
+          is_quarter_end: false
+          }
+    overrides:
+      vars:
+        start_year: 2022
+        end_year: 2022
+        select_statement: |
+          select *
+          from final
+          where date = '2022-01-01'

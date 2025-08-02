@@ -1,0 +1,23 @@
+version: 2
+
+unit_tests:
+  - name: unit_test_add_metadata_columns
+    model: ut__add_metadata_columns
+    config:
+      tags: ['unit_test']
+    given:
+      - input: this
+        format: sql # Because 'this' points to and ephemeral model, the input can only be a sql query
+        rows:
+          select 1234 as id union
+          select 4567 as id
+    expect:
+      rows:
+          - {id: 1234, job_id: 'job123', run_id: 'run123', insert_date: '2023-01-01 00:00:00.000'}
+          - {id: 4567, job_id: 'job123', run_id: 'run123', insert_date: '2023-01-01 00:00:00.000'}
+    overrides:
+      vars:
+        job_id: job123
+        run_id: run123
+      macros:
+        dbt.current_timestamp: "'2023-01-01 00:00:00.000'"
